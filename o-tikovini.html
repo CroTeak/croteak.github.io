@@ -23,14 +23,7 @@
       color:#fff;
       overflow-x: hidden;
     }
-
-    /* VIDEO POZADINA */
-    .video-bg{
-      position: fixed; inset: 0;
-      width:100%; height:100%;
-      object-fit: cover;
-      z-index: -2;
-    }
+     
     /* Tamni sloj radi čitljivosti */
     .scrim{
       position: fixed; inset: 0;
@@ -124,10 +117,8 @@
 </head>
 <body>
 
-  <!-- Tvoja video pozadina (promijeni naziv datoteke po potrebi) -->
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="https://www.youtube.com/watch?v=WSDYqbFGHi8">
-  </video>
+  <body style="background: url('background2.jpg') no-repeat center center fixed; background-size: cover;">
+
   <div class="scrim"></div>
 
   <!-- Top navigacija -->
