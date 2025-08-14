@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <title>Info Cjenik - CroTeak</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Yesteryear za naslove -->
+  <!-- Naslovi -->
   <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
+  <!-- Tekst -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --gold:#ffdd99;
       --teal:#006d77;
       --text:#1f2937;
-      --card-bg: rgba(255,255,255,0.9);
+      --card-bg: rgba(255,255,255,0.92);
       --shadow: 0 6px 24px rgba(0,0,0,0.12);
       --radius: 16px;
     }
-
     /* Pozadina kao na početnoj */
     body{
       margin:0;
@@ -24,27 +25,18 @@
       background-size: cover;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-
-    /* Tamni, blagi overlay radi čitljivosti */
+    /* Overlay radi čitljivosti */
     .overlay{
       background: rgba(0,0,0,0.45);
       min-height: 100vh;
       padding: 40px 16px;
     }
-
-    .container{
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .container{ max-width: 1100px; margin: 0 auto; }
 
     /* Header */
-    .brand{
-      text-align:center;
-      color: white;
-      margin-bottom: 28px;
-    }
+    .brand{ text-align:center; color: white; margin-bottom: 28px; }
     .brand h1{
       font-family: 'Yesteryear', cursive;
       font-size: 3.2rem;
@@ -52,12 +44,9 @@
       color: var(--gold);
       letter-spacing: .5px;
     }
-    .brand p{
-      margin:0;
-      opacity:.95;
-    }
+    .brand p{ margin:0; opacity:.95; }
 
-    /* Kartice stavki */
+    /* Kartice */
     .item{
       display: flex;
       gap: 0;
@@ -68,19 +57,29 @@
       margin-bottom: 22px;
       backdrop-filter: blur(2px);
     }
-    .item img{
-      width: 340px;
-      height: 100%;
+    .item-media{
+      flex: 0 0 340px;
       max-height: 260px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+    .item-media img{
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       display:block;
+      cursor: zoom-in;
     }
     .item-content{
+      flex: 1;
       padding: 20px 22px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
     }
     .item h2{
       margin:0 0 6px 0;
@@ -88,6 +87,11 @@
       color: var(--teal);
       font-size: 2rem;
       line-height: 1.1;
+    }
+    .item p{
+      margin:0;
+      line-height: 1.6;
+      font-size: 1.02rem;
     }
     .price{
       display:inline-block;
@@ -98,20 +102,27 @@
       font-weight: 700;
       font-size: 0.95rem;
     }
-    .item p{
-      margin:0;
-      line-height: 1.55;
-      font-size: 1rem;
+    .muted{ opacity:.9; }
+
+    /* Galerija (za stavku 3) */
+    .thumbs{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 0 22px 20px 22px;
     }
-    .muted{
-      opacity:.85;
+    .thumbs img{
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: zoom-in;
+      display:block;
+      background:#fff;
     }
 
     /* Povratni link */
-    .back{
-      text-align:center;
-      margin: 26px 0 6px 0;
-    }
+    .back{ text-align:center; margin: 26px 0 6px 0; }
     .back a{
       display:inline-block;
       text-decoration:none;
@@ -122,20 +133,31 @@
       font-weight: 700;
       transition: transform .12s ease;
     }
-    .back a:hover{
-      transform: translateY(-1px);
+    .back a:hover{ transform: translateY(-1px); }
+
+    /* Lightbox */
+    .lightbox{
+      position: fixed; inset: 0; background: rgba(0,0,0,.9);
+      display: none; align-items: center; justify-content: center;
+      z-index: 99; padding: 20px;
+    }
+    .lightbox img{
+      max-width: 95vw; max-height: 90vh; width: auto; height: auto; display:block;
+    }
+    .lightbox.close-hint{
+      cursor: zoom-out;
     }
 
     /* Responsive */
     @media (max-width: 900px){
-      .item{
-        flex-direction: column;
-      }
-      .item img{
-        width: 100%;
-        max-height: 240px;
-      }
+      .item{ flex-direction: column; }
+      .item-media{ flex-basis: auto; width: 100%; max-height: 240px; }
       .brand h1{ font-size: 2.6rem; }
+      .thumbs{ grid-template-columns: repeat(3, 1fr); }
+      .thumbs img{ height: 90px; }
+    }
+    @media (max-width: 520px){
+      .thumbs{ grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -149,64 +171,70 @@
 
       <!-- STAVKA 1 -->
       <section class="item">
-        <img src="slika1.jpg" alt="Izrada palube od umjetne tikovine">
+        <div class="item-media">
+          <img src="slika1.jpg" alt="Izrada palube od umjetne tikovine" data-full="slika1.jpg">
+        </div>
         <div class="item-content">
           <h2>Izrada palube od umjetne tikovine</h2>
-          <span class="price">170 € + PDV (sa otpadom)</span>
+          <span class="price">170 € / m² + PDV (sa otpadom)</span>
           <p class="muted">
             Precizna izrada palubnih panela od umjetne tikovine, optimizirana za trajnost, prianjanje i vizualnu eleganciju.
-            Cijena uključuje obračun s otpadaom (vidi objašnjenje niže).
+            Cijena uključuje obračun s otpadom (pojašnjenje u nastavku).
           </p>
         </div>
       </section>
 
       <!-- STAVKA 2 -->
       <section class="item">
-        <img src="slika2.jpg" alt="Ploče za obradu – standardne dimenzije">
+        <div class="item-media">
+          <img src="slika2.jpg" alt="Ploče za obradu – standardne dimenzije" data-full="slika2.jpg">
+        </div>
         <div class="item-content">
           <h2>Ploče – standardne dimenzije i obrada</h2>
           <p class="muted">
-            Radimo s pločama dimenzija <strong>1200 × 2400 mm</strong>. Ploče se
-            profesionalno <strong>obrađuju</strong> (rezanje, graviranje fuga/linija, radiusi i završna dorada)
+            Radimo s pločama dimenzija <strong>1200 × 2400 mm</strong>. Ploče se profesionalno
+            <strong>obrađuju</strong> (rezanje, graviranje fuga/linija, radiusi i završna dorada)
             prema mjeri i geometriji vašeg plovila, uz strogu kontrolu kvalitete spojeva i bridova.
           </p>
         </div>
       </section>
 
-      <!-- STAVKA 3 -->
+      <!-- STAVKA 3 (GALERIJA 5 SLIKA S LIJEVE STRANE) -->
       <section class="item">
-  <div style="display:flex; flex-direction:column; flex:1;">
-    <div class="item-content">
-      <h2>3D grafika / projektiranje palube</h2>
-      <span class="price">150 € (samostalna usluga)</span>
-      <p class="muted">
-        Izrada 3D grafike (modeliranje i tehnička priprema) naplaćuje se
-        <strong>150 €</strong> kada se naručuje kao zasebna usluga.
-        <br>Ukoliko izradu panela od umjetne tikovine radi CroTeak, <strong>3D grafika je uključena u cijenu po m<sup>2</sup></strong>.
-      </p>
-    </div>
-    <div style="display:flex; flex-wrap:wrap; gap:8px; padding:0 20px 20px 20px; justify-content:center;">
-      <img src="3d skica.png" alt="3D skica 1" style="width:150px; height:auto; border-radius:8px; object-fit:cover;">
-      <img src="3d skica2.png" alt="3D skica 2" style="width:150px; height:auto; border-radius:8px; object-fit:cover;">
-      <img src="3d skica3.png" alt="3D skica 3" style="width:150px; height:auto; border-radius:8px; object-fit:cover;">
-      <img src="3d skica4.png" alt="3D skica 4" style="width:150px; height:auto; border-radius:8px; object-fit:cover;">
-      <img src="3d skica5.png" alt="3D skica 5" style="width:150px; height:auto; border-radius:8px; object-fit:cover;">
-    </div>
-  </div>
-</section>
+        <div class="item-media" style="flex:0 0 360px; display:block; max-height:none; background:transparent;">
+          <div class="thumbs">
+            <img src="3d%20skica.png"  alt="3D skica 1"  data-full="3d%20skica.png">
+            <img src="3d%20skica2.png" alt="3D skica 2" data-full="3d%20skica2.png">
+            <img src="3d%20skica3.png" alt="3D skica 3" data-full="3d%20skica3.png">
+            <img src="3d%20skica4.png" alt="3D skica 4" data-full="3d%20skica4.png">
+            <img src="3d%20skica5.png" alt="3D skica 5" data-full="3d%20skica5.png">
+          </div>
+        </div>
+        <div class="item-content">
+          <h2>3D grafika / projektiranje palube</h2>
+          <span class="price">150 € (samostalna usluga)</span>
+          <p class="muted">
+            Izrada 3D grafike (modeliranje i tehnička priprema) naplaćuje se
+            <strong>150 €</strong> kada se naručuje kao zasebna usluga.
+            <br>Ukoliko izradu panela od umjetne tikovine radi CroTeak,
+            <strong>3D grafika je uključena u cijenu po m<sup>2</sup></strong>.
+          </p>
+        </div>
+      </section>
 
       <!-- STAVKA 4 -->
       <section class="item">
-        <img src="slika4.jpg" alt="Nesting i optimizacija iskorištenja materijala">
+        <div class="item-media">
+          <img src="slika4.jpg" alt="Nesting i optimizacija iskorištenja materijala" data-full="slika4.jpg">
+        </div>
         <div class="item-content">
           <h2>Obračun “sa otpadom” – profesionalni nesting</h2>
           <p class="muted">
-            Nakon točnog mjerenja i definiranja fuga/gravura, primjenjujemo
-            <strong>profesionalni nesting</strong> – cijela geometrija broda slaže se na ploče
-            uz računalnu optimizaciju. Cilj je <strong>minimalni otpad</strong> uz maksimalnu
-            iskoristivost materijala. Zbog realne potrošnje ploča i rasporeda elemenata,
-            <strong>cijena se obračunava sa otpadom</strong> tako da kupac plati stvarno potrebnu
-            količinu materijala za svoj projekt – transparentno i pravedno.
+            Nakon točnog mjerenja i definiranja fuga/gravura primjenjujemo
+            <strong>profesionalni nesting</strong>: kompletna geometrija broda slaže se na ploče
+            uz računalnu optimizaciju. Cilj je <strong>minimalni otpad</strong> i maksimalna
+            iskoristivost materijala. Zato se <strong>cijena obračunava sa otpadom</strong> – kupac plaća
+            realnu potrošnju ploča potrebnu za konkretan projekt.
           </p>
         </div>
       </section>
@@ -216,5 +244,35 @@
       </div>
     </div>
   </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script>
+    // Klik na bilo koju sliku s data-full otvara lightbox
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+
+      function openLightbox(src){
+        lbImg.src = src;
+        lb.style.display = 'flex';
+        lb.classList.add('close-hint');
+      }
+      function closeLightbox(){
+        lb.style.display = 'none';
+        lbImg.src = '';
+      }
+
+      document.querySelectorAll('img[data-full]').forEach(img=>{
+        img.addEventListener('click', ()=> openLightbox(img.getAttribute('data-full')));
+      });
+
+      lb.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
+    })();
+  </script>
 </body>
 </html>
