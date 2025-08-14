@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>O Tikovini - CroTeak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Lijepi font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Video pozadina */
+    .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Overlay sloj za čitljivost teksta */
+    .overlay {
+      background: rgba(0, 0, 0, 0.55);
+      position: fixed;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .content {
+      max-width: 800px;
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffdd99;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ffdd99;
+      color: #333;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    a:hover {
+      background: #e6c87f;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .content {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- VIDEO POZADINA (promijeni "tikovina.mp4" u ime tvog videa) -->
+  <video autoplay muted loop class="video-bg">
+    <source src="tikovina.mp4" type="video/mp4">
+    Tvoj preglednik ne podržava video pozadinu.
+  </video>
+
+  <div class="overlay">
+    <div class="content">
+      <h1>EVA Foam Tikovina</h1>
+      <p>
+        EVA Foam tikovina je moderna, izdržljiva i estetski privlačna alternativa pravoj tikovini.
+        Otporna je na UV zrake, vodu i habanje, a istovremeno pruža udobnost i protuklizna svojstva.
+        Idealna je za palube brodova, jahte i vanjske površine, zahtijeva minimalno održavanje
+        i dostupna je u različitim bojama i teksturama.
+      </p>
+      <a href="index.html">← Povratak na početnu</a>
+    </div>
+  </div>
+
+</body>
+</html>
