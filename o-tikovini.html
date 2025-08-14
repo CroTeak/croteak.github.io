@@ -2,96 +2,200 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>O Tikovini - CroTeak</title>
+  <title>O Tikovini (EVA Foam) - CroTeak</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Lijepi font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Naslovni font (elegantno) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Tjelesni font (čitljiv) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root{
+      --gold:#ffdd99;
+      --gold2:#e6c87f;
+      --glass: rgba(0,0,0,.45);
+      --panel: rgba(255,255,255,.92);
+      --teal:#006d77;
     }
-    body, html {
-      height: 100%;
-      font-family: 'Playfair Display', serif;
-      color: white;
-      text-align: center;
-      overflow: hidden;
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; margin:0; }
+    body{
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#fff;
+      overflow-x: hidden;
     }
-    /* Video pozadina */
-    .video-bg {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
+
+    /* VIDEO POZADINA */
+    .video-bg{
+      position: fixed; inset: 0;
+      width:100%; height:100%;
       object-fit: cover;
+      z-index: -2;
+    }
+    /* Tamni sloj radi čitljivosti */
+    .scrim{
+      position: fixed; inset: 0;
+      background: var(--glass);
       z-index: -1;
     }
-    /* Overlay sloj za čitljivost teksta */
-    .overlay {
-      background: rgba(0, 0, 0, 0.55);
-      position: fixed;
-      inset: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+
+    /* Topbar (navigacija) */
+    .topbar{
+      position: fixed; top: 20px; right: 20px;
+      display:flex; gap:10px; z-index: 5;
     }
-    .content {
-      max-width: 800px;
-      font-size: 1.3rem;
-      line-height: 1.6;
+    .topbar a{
+      text-decoration:none; background: var(--gold); color:#333;
+      padding:10px 18px; border-radius:10px; font-weight:700;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #ffdd99;
+    .topbar a:hover{ background: var(--gold2); }
+
+    /* Sadržajna “kartica” */
+    .wrap{
+      min-height:100vh; display:grid; place-items:center;
+      padding: 90px 16px 40px;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #ffdd99;
-      color: #333;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .panel{
+      width: min(1000px, 92vw);
+      background: var(--panel);
+      color:#1f2937;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
+      overflow: hidden;
     }
-    a:hover {
-      background: #e6c87f;
+    .head{
+      padding: 28px 26px 10px;
+      text-align:center;
+      background: linear-gradient(180deg, rgba(0,0,0,.15), transparent);
+      color:#fff;
     }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.2rem;
-      }
-      .content {
-        font-size: 1.1rem;
-      }
+    .head h1{
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin: 0 0 6px;
+      color: var(--gold);
+      letter-spacing:.3px;
+    }
+    .head p{ margin:0 0 14px; opacity:.95; }
+
+    .content{ padding: 22px 24px 28px; }
+    .badge{
+      display:inline-block; background:#fff; color:#333; border-radius:999px;
+      padding:6px 12px; font-weight:700; margin: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+    .card{
+      background:#fff; border-radius:14px; padding:16px 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+    .card h2{
+      margin:0 0 8px; color: var(--teal);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+    }
+    .card p{ margin:0; line-height:1.6; }
+    ul{ margin: 8px 0 0 18px; }
+    li{ margin: 6px 0; }
+
+    .note{
+      margin-top:18px; padding:12px 14px; border-radius:12px;
+      background: #fff; color:#333; font-size:.95rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+
+    .back{
+      text-align:center; padding: 0 0 22px;
+    }
+    .back a{
+      text-decoration:none; background: var(--gold); color:#333;
+      padding:10px 18px; border-radius:10px; font-weight:700;
+      box-shadow: 0 6px 18px rgba(0,0,0,.2);
+    }
+    .back a:hover{ background: var(--gold2); }
+
+    @media (max-width: 820px){
+      .grid{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- VIDEO POZADINA (promijeni "tikovina.mp4" u ime tvog videa) -->
-  <video autoplay muted loop class="video-bg">
-    <source src="https://www.youtube.com/watch?v=WSDYqbFGHi8">
-    Tvoj preglednik ne podržava video pozadinu.
+  <!-- Tvoja video pozadina (promijeni naziv datoteke po potrebi) -->
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="tikovina.mp4" type="video/mp4">
   </video>
+  <div class="scrim"></div>
 
-  <div class="overlay">
-    <div class="content">
-      <h1>EVA Foam Tikovina</h1>
-      <p>
-        EVA Foam tikovina je moderna, izdržljiva i estetski privlačna alternativa pravoj tikovini.
-        Otporna je na UV zrake, vodu i habanje, a istovremeno pruža udobnost i protuklizna svojstva.
-        Idealna je za palube brodova, jahte i vanjske površine, zahtijeva minimalno održavanje
-        i dostupna je u različitim bojama i teksturama.
-      </p>
-      <a href="index.html">← Povratak na početnu</a>
-    </div>
+  <!-- Top navigacija -->
+  <div class="topbar">
+    <a href="index.html">Početna</a>
+    <a href="info-cjenik.html">Info Cjenik</a>
   </div>
 
+  <!-- Sadržaj -->
+  <main class="wrap">
+    <section class="panel">
+      <header class="head">
+        <h1>EVA Foam “Tikovina”</h1>
+        <p>Moderni, protuklizni i udobni palubni paneli – pametna alternativa pravoj tikovini.</p>
+      </header>
+
+      <div class="content">
+        <!-- Brze činjenice (badges) -->
+        <div>
+          <span class="badge">Debljina: 6 mm</span>
+          <span class="badge">UV otpornost: 3000 h</span>
+          <span class="badge">Samoljepljivo (3M)</span>
+          <span class="badge">Visoka gustoća (160–180 kg/m³)</span>
+          <span class="badge">Tvrdoća ≈ 65° Shore C</span>
+        </div>
+
+        <!-- Grid sekcije -->
+        <div class="grid" style="margin-top:16px;">
+          <article class="card">
+            <h2>Što je EVA Foam tikovina?</h2>
+            <p>EVA (PE/EVA) palubni paneli oponašaju izgled tikovine, ali nude veću udobnost, protukliznost i jednostavnije održavanje. Zatvorena ćelijska struktura ne upija vodu, otporna je na UV zračenje i sol, a poleđina dolazi sa snažnim vodootpornim ljepilom za brzo postavljanje.</p>
+          </article>
+
+          <article class="card">
+            <h2>Dimenzije ploča</h2>
+            <p>Standardne ploče najčešće dolaze u veličinama <strong>2400 × 1200 mm</strong> ili <strong>2400 × 900 mm</strong> (ovisno o modelu/boji). Površina može biti <em>brušena</em> ili <em>embossed</em> (reljefna), s utorima (“teak” linije) prema odabranoj varijanti.</p>
+          </article>
+
+          <article class="card">
+            <h2>UV otpornost i trajnost</h2>
+            <p>Materijal je testiran na <strong>3000 sati UV otpornosti</strong>, što u stvarnim morskim uvjetima daje tipičan vijek trajanja od <strong>3–5 godina</strong> uz pravilnu uporabu i održavanje.</p>
+          </article>
+
+          <article class="card">
+            <h2>Instalacija</h2>
+            <p>Instalacija je <strong>peel-and-stick</strong> zahvaljujući snažnom <strong>3M samoljepljivom</strong> sloju. Ploče se kroje prema mjeri (CNC rezanje, gravura fuga, radiusi) i lijepe na čistu, odmašćenu podlogu.</p>
+          </article>
+
+          <article class="card">
+            <h2>Održavanje</h2>
+            <p>Čisti se vodom i mekanom četkom. Materijal je otporan na mrlje, vlagu i klizanje, a zbog zatvorene strukture ne upija vodu i lako se suši.</p>
+          </article>
+
+          <article class="card">
+            <h2>Primjene</h2>
+            <p>Palube brodova i jahti, kokpiti, stepenice, hladnjaci/fishing box podloge, RV/camper područja, golf kolica te svi prostori gdje je važna udobnost i protukliznost.</p>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Napomena o cijeni:</strong> kod izrade po mjeri primjenjujemo profesionalni <em>nesting</em> (optimizaciju rasporeda elemenata po pločama) radi smanjenja otpada. Stoga se projekti obračunavaju “sa otpadom” – kupac plaća stvarnu potrošnju materijala potrebnu za svoj brod.
+        </div>
+      </div>
+
+      <div class="back">
+        <a href="index.html">← Povratak na početnu</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
