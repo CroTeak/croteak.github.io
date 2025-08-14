@@ -8,47 +8,68 @@
             font-family: Arial, sans-serif;
             background-color: #f5f7f8;
             padding: 30px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
         }
         h1 {
             color: #006d77;
+            text-align: center;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .item {
+            display: flex;
+            align-items: center;
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
+        .item img {
+            width: 300px;
+            height: auto;
+            object-fit: cover;
         }
-        th {
-            background-color: #006d77;
-            color: white;
+        .item .text {
+            padding: 20px;
+        }
+        .item .text h2 {
+            margin-top: 0;
+            color: #006d77;
+        }
+        .item .text p {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 768px) {
+            .item {
+                flex-direction: column;
+            }
+            .item img {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <h1>Info Cjenik</h1>
-    <p>Ovdje ide opis i detalji o cijenama usluga i proizvoda CroTeak-a.</p>
 
-    <table>
-        <tr>
-            <th>Proizvod/Usluga</th>
-            <th>Cijena (EUR)</th>
-        </tr>
-        <tr>
-            <td>Izrada palube od umjetne tikovine</td>
-            <td>Po dogovoru</td>
-        </tr>
-        <tr>
-            <td>Obrada tikovine</td>
-            <td>Po dogovoru</td>
-        </tr>
-    </table>
+    <div class="item">
+        <img src="slika1.jpg" alt="Paluba od umjetne tikovine">
+        <div class="text">
+            <h2>Izrada palube od umjetne tikovine</h2>
+            <p>Cijena: Po dogovoru</p>
+            <p>Izrađujemo palube po mjeri, s vrhunskom preciznošću i dugotrajnošću materijala.</p>
+        </div>
+    </div>
 
-    <p><a href="index.html">← Povratak na početnu</a></p>
+    <div class="item">
+        <img src="slika2.jpg" alt="Obrada tikovine">
+        <div class="text">
+            <h2>Obrada tikovine</h2>
+            <p>Cijena: Po dogovoru</p>
+            <p>Profesionalna obrada i obnavljanje tikovine za jahte i brodove.</p>
+        </div>
+    </div>
+
+    <p style="text-align:center;"><a href="index.html">← Povratak na početnu</a></p>
 </body>
 </html>
