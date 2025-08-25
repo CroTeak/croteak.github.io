@@ -1,1 +1,221 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Završeni radovi - CroTeak</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontovi -->
+  <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --gold:#ffdd99;
+      --gold2:#e6c87f;
+      --panel: rgba(255,255,255,.88);
+      --shadow: 0 8px 22px rgba(0,0,0,.18);
+      --overlay: rgba(0,0,0,.55);
+      --title:#006d77;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      color:#fff;
+    }
 
+    /* Top bar (isti kao na indexu) */
+    .topbar{
+      position: fixed;
+      top: 20px; left: 20px; right: 20px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      z-index: 10;
+    }
+    .contact-info{ font-size: 0.9rem; line-height:1.3; color:#eee; }
+    .nav a{
+      text-decoration:none; background: var(--gold); color:#333;
+      padding:10px 18px; border-radius:10px; font-weight:700; font-size:1rem;
+      margin-left:10px; box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: background .2s ease, transform .12s ease;
+      display:inline-block;
+    }
+    .nav a:hover{ background: var(--gold2); transform: translateY(-1px); }
+    .nav-col{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+
+    /* Overlay + container */
+    .overlay{ background: var(--overlay); min-height:100vh; padding: 100px 16px 40px; }
+    .container{ max-width: 1200px; margin: 0 auto; }
+
+    /* Naslov stranice */
+    header.brand{ text-align:center; margin-bottom: 22px; }
+    .brand h1{
+      font-family: 'Yesteryear', cursive;
+      color: var(--gold);
+      font-size: 3rem; margin: 0 0 6px;
+    }
+    .brand p{ margin:0; opacity:.95; }
+
+    /* Layout projekata: dvije velike kartice pored */
+    .projects{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    /* Kartica projekta */
+    .project{
+      background: var(--panel);
+      color:#1f2937;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      backdrop-filter: blur(2px);
+      display:flex;
+      flex-direction: column;
+      min-height: 420px;
+    }
+    .project h2{
+      margin: 0 0 10px;
+      font-size: 1.6rem;
+      color: var(--title);
+    }
+    .thumbs{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+    }
+    .thumb{
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background:#fff;
+      cursor: zoom-in;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    }
+    .thumb img{
+      display:block; width:100%; height:140px; object-fit: cover;
+      transition: transform .25s ease;
+    }
+    .thumb:hover img{ transform: scale(1.03); }
+
+    /* Lightbox */
+    .lightbox{
+      position: fixed; inset:0; display:none;
+      align-items: center; justify-content: center;
+      background: rgba(0,0,0,.92); z-index: 99; padding: 20px;
+    }
+    .lightbox img{ max-width: 95vw; max-height: 90vh; display:block; }
+
+    /* Povratak */
+    .back{ text-align:center; margin-top: 18px; }
+    .back a{
+      text-decoration:none; background: var(--gold); color:#333;
+      padding:10px 18px; border-radius:10px; font-weight:700;
+      box-shadow: 0 6px 18px rgba(0,0,0,.2);
+    }
+    .back a:hover{ background: var(--gold2); }
+
+    /* Responsivnost */
+    @media (max-width: 1100px){
+      .thumb img{ height:130px; }
+    }
+    @media (max-width: 900px){
+      .projects{ grid-template-columns: 1fr; }
+      .brand h1{ font-size: 2.4rem; }
+    }
+    @media (max-width: 560px){
+      .thumbs{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .thumb img{ height:120px; }
+      .nav a{ font-size:.9rem; padding:8px 14px; }
+      .contact-info{ font-size:.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gornja traka -->
+  <div class="topbar">
+    <div class="contact-info">
+      <div>📞 099/411-9579</div>
+      <div>✉ valentino.soban@gmail.com</div>
+    </div>
+    <div class="nav nav-col">
+      <a href="info-cjenik.html">Info Cjenik</a>
+      <a href="zavrseni-radovi.html">Završeni radovi</a>
+      <a href="o-tikovini.html">O Tikovini</a>
+    </div>
+  </div>
+
+  <div class="overlay">
+    <div class="container">
+      <header class="brand">
+        <h1>Završeni radovi</h1>
+        <p>Primjeri gotovih projekata CroTeak – kliknite sliku za uvećanje.</p>
+      </header>
+
+      <!-- DVA PROJEKTA JEDAN DO DRUGOG -->
+      <section class="projects">
+
+        <!-- PROJEKT 1 -->
+        <article class="project">
+          <h2>Merry Fisher 625</h2>
+          <div class="thumbs">
+            <!-- zamijeni imena na svoja -->
+            <div class="thumb"><img src="mf625-1.jpg" alt="Merry Fisher 625 - 1" data-full="mf625-1.jpg"></div>
+            <div class="thumb"><img src="mf625-2.jpg" alt="Merry Fisher 625 - 2" data-full="mf625-2.jpg"></div>
+            <div class="thumb"><img src="mf625-3.jpg" alt="Merry Fisher 625 - 3" data-full="mf625-3.jpg"></div>
+            <div class="thumb"><img src="mf625-4.jpg" alt="Merry Fisher 625 - 4" data-full="mf625-4.jpg"></div>
+            <div class="thumb"><img src="mf625-5.jpg" alt="Merry Fisher 625 - 5" data-full="mf625-5.jpg"></div>
+            <div class="thumb"><img src="mf625-6.jpg" alt="Merry Fisher 625 - 6" data-full="mf625-6.jpg"></div>
+          </div>
+        </article>
+
+        <!-- PROJEKT 2 -->
+        <article class="project">
+          <h2>Gobby Fisherman</h2>
+          <div class="thumbs">
+            <!-- zamijeni imena na svoja -->
+            <div class="thumb"><img src="rad1.jpg" alt="Gobby Fisherman - 1" data-full="rad1.jpg"></div>
+            <div class="thumb"><img src="rad2.jpg" alt="Gobby Fisherman - 2" data-full="rad2.jpg"></div>
+            <div class="thumb"><img src="rad3.jpg" alt="Gobby Fisherman - 3" data-full="rad3.jpg"></div>
+            <div class="thumb"><img src="rad4.jpg" alt="Gobby Fisherman - 4" data-full="rad4.jpg"></div>
+            <div class="thumb"><img src="rad5.jpg" alt="Gobby Fisherman - 5" data-full="rad5.jpg"></div>
+            <div class="thumb"><img src="rad6.jpg" alt="Gobby Fisherman - 6" data-full="rad6.jpg"></div>
+            <div class="thumb"><img src="rad7.jpg" alt="Gobby Fisherman - 6" data-full="rad7.jpg"></div>
+            <div class="thumb"><img src="rad8.jpg" alt="Gobby Fisherman - 6" data-full="rad8.jpg"></div>
+            <div class="thumb"><img src="rad9.jpg" alt="Gobby Fisherman - 6" data-full="rad9.jpg"></div>
+            <div class="thumb"><img src="rad10.jpg" alt="Gobby Fisherman - 6" data-full="rad10.jpg"></div>
+          </div>
+        </article>
+
+      </section>
+
+      <div class="back">
+        <a href="index.html">← Povratak na početnu</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script>
+    // Lightbox: klik na thumbnail otvara veliku sliku
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      function openLB(src){ lbImg.src = src; lb.style.display = 'flex'; }
+      function closeLB(){ lb.style.display = 'none'; lbImg.src=''; }
+
+      document.querySelectorAll('img[data-full]').forEach(img=>{
+        img.addEventListener('click', ()=> openLB(img.getAttribute('data-full')));
+      });
+      lb.addEventListener('click', closeLB);
+      document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
+    })();
+  </script>
+</body>
+</html>
