@@ -4,53 +4,62 @@
   <meta charset="UTF-8">
   <title>CroTeak - Umjetna tikovina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Naslovni font -->
+  <!-- Fontovi -->
   <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
-  <!-- Tjelesni font (čitljiviji opisni tekst) -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
       --gold:#ffdd99;
       --gold-hover:#e6c87f;
-      --teal:#006d77;
       --overlay: rgba(0,0,0,0.55);
     }
 
-    /* Pozadina kao i prije */
     body{
       margin:0;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: 'Montserrat', sans-serif;
       color: #fff;
-      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
 
-    /* Gornja navigacija (Info Cjenik gore desno) */
+    /* Top bar */
     .topbar{
       position: fixed;
       top: 20px;
+      left: 20px;
       right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       z-index: 10;
     }
-    .topbar a{
+
+    /* Lijeva strana (kontakt podaci) */
+    .contact-info{
+      font-size: 0.9rem;
+      line-height: 1.3;
+      color: #eee;
+    }
+
+    /* Desna strana (navigacija) */
+    .nav a{
       text-decoration: none;
       background: var(--gold);
       color: #333;
-      padding: 12px 22px;
-      border-radius: 12px;
+      padding: 10px 18px;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 1.1rem; /* veći font kao što si tražio */
+      font-size: 1rem;
+      margin-left: 10px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      transition: transform .12s ease, background .2s ease;
+      transition: background .2s ease, transform .12s ease;
     }
-    .topbar a:hover{
-      transform: translateY(-1px);
+    .nav a:hover{
       background: var(--gold-hover);
+      transform: translateY(-1px);
     }
 
-    /* Tamni sloj preko pozadine */
+    /* Overlay */
     .overlay{
       background: var(--overlay);
       min-height: 100vh;
@@ -60,7 +69,7 @@
       padding: 80px 16px 40px;
     }
 
-    /* Hero sadržaj */
+    /* Hero */
     .hero{
       max-width: 900px;
       margin: 0 auto;
@@ -75,7 +84,6 @@
       font-size: 4rem;
       margin: 10px 0 6px;
       color: var(--gold);
-      letter-spacing: .5px;
     }
     .subtitle{
       margin: 0 auto 18px;
@@ -85,7 +93,6 @@
     }
     .cta{
       display: inline-block;
-      margin-top: 8px;
       background: var(--gold);
       color: #333;
       padding: 12px 24px;
@@ -94,37 +101,39 @@
       text-decoration: none;
       font-size: 1rem;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-      transition: transform .12s ease, background .2s ease;
+      transition: background .2s ease, transform .12s ease;
     }
     .cta:hover{
-      transform: translateY(-1px);
       background: var(--gold-hover);
+      transform: translateY(-1px);
     }
 
-    /* Sitniji tekst ispod (ako ti zatreba) */
-    .note{
-      margin-top: 14px;
-      font-size: 0.95rem;
-      opacity: .9;
-    }
-
-    /* Responsivnost */
-    @media (max-width: 520px){
+    @media (max-width: 600px){
       h1{ font-size: 3rem; }
-      .topbar a{ font-size: 1rem; padding: 10px 18px; }
       .logo{ max-width: 160px; }
+      .nav a{ font-size: 0.9rem; padding: 8px 14px; }
+      .contact-info{ font-size: 0.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Info Cjenik GORE DESNO -->
- <div class="topbar">
-    <a href="info-cjenik.html" style="margin-right:10px;">Info Cjenik</a>
-    <a href="o-tikovini.html">O Tikovini</a>
-</div>
+  <!-- Gornja traka -->
+  <div class="topbar">
+    <!-- Lijevo: broj i mail -->
+    <div class="contact-info">
+      <div>📞 099/411-9579</div>
+      <div>✉ valentino.soban@gmail.com</div>
+    </div>
 
-  <!-- Hero sloj -->
+    <!-- Desno: navigacija -->
+    <div class="nav">
+      <a href="info-cjenik.html">Info Cjenik</a>
+      <a href="o-tikovini.html">O Tikovini</a>
+    </div>
+  </div>
+
+  <!-- Hero sekcija -->
   <div class="overlay">
     <div class="hero">
       <img src="logo.png" alt="CroTeak logo" class="logo">
@@ -134,6 +143,8 @@
         Izrada i obrada umjetne tikovine za brodove i jahte.
       </p>
       <a class="cta" href="mailto:soban.valentino@gmail.com">Kontaktirajte nas</a>
-      <!-- <p class="note">info@croteak.hr</p>  ako želiš dodat i e-mail ispod gumba -->
     </div>
   </div>
+
+</body>
+</html>
