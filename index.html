@@ -205,6 +205,24 @@
     .fab-btn:hover{ transform: translateY(-2px); background: var(--gold-hover); }
     .fab-btn:active{ transform: translateY(0); }
 
+    .logo-watermark {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 120px;   /* prilagodi veličinu */
+  opacity: 0.6;   /* prozirnost da ne smeta */
+  z-index: 500;   /* ispod trust-note srca */
+  pointer-events: none; /* da ne blokira klikove */
+}
+
+.logo-watermark img,
+.logo-watermark video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50%; /* opcionalno da izgleda kružno */
+}
+
     /* 🔹 FOOTER */
     footer{
       position: relative;
@@ -298,6 +316,19 @@
     <a href="mailto:info@croteak.com">Kontakt</a>
   </div>
 </footer>
+
+
+  <!-- 👇 OVDJE UBACI WATERMARK -->
+  <div class="logo-watermark">
+    <!-- GIF verzija -->
+    <!-- <img src="logo-rotate.gif" alt="CroTeak animirani logo"> -->
+
+    <!-- Video verzija -->
+    <video autoplay muted loop playsinline>
+      <source src="logo-rotate.webm" type="video/webm">
+      <source src="logo-rotate.mp4" type="video/mp4">
+    </video>
+  </div>
 
 <!-- 🔹 Skripta za hamburger meni + godina u footeru -->
 <script>
