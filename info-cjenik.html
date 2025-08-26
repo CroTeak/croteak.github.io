@@ -1,41 +1,123 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
+  <!-- 🔹 Ikone (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 🔹 Meta / SEO -->
   <meta charset="UTF-8">
-  <title>Info Cjenik - CroTeak</title>
+  <title>Info Cjenik - CroTeak | Umjetna tikovina (EVA Foam)</title>
+  <meta name="description" content="CroTeak info cjenik: izrada palube od umjetne tikovine (EVA Foam), 3D grafika, nesting i ploče standardnih dimenzija.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Naslovi -->
+
+  <!-- 🔹 Open Graph -->
+  <meta property="og:title" content="Info Cjenik - CroTeak | Umjetna tikovina (EVA Foam)">
+  <meta property="og:description" content="Cijene i usluge: izrada po mjeri, 3D grafika, nesting, ploče. Klik na slike otvara pregled u punoj veličini.">
+  <meta property="og:image" content="https://croteak.github.io/CROTEAKLOGOTRANSPARENT2.png">
+  <meta property="og:url" content="https://croteak.github.io/info-cjenik.html">
+  <meta property="og:type" content="website">
+
+  <!-- 🔹 Fontovi -->
   <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
-  <!-- Tekst -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- rukopisni font za poruku -->
+
   <style>
     :root{
       --gold:#ffdd99;
+      --gold2:#e6c87f;
       --teal:#006d77;
       --text:#1f2937;
+      --overlay: rgba(0,0,0,0.55);
       --card-bg: rgba(255,255,255,0.20);
       --shadow: 0 6px 24px rgba(0,0,0,0.12);
       --radius: 16px;
     }
-    /* Pozadina kao na početnoj */
+
+    /* 🔹 OPĆE */
     body{
       margin:0;
-      color: var(--text);
+      color:#fff;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
-    /* Overlay radi čitljivosti */
+    a{ color: inherit; }
+
+    /* 🔹 GORNJA NAVIGACIJA (kao na indexu) */
+    .topbar{
+      position: fixed;
+      top: 12px; left: 12px; right: 12px;
+      display: flex; align-items: flex-start; justify-content: space-between;
+      z-index: 9999;
+    }
+    .contact-info{ font-size: 0.9rem; line-height: 1.3; color:#eee; }
+    .social-icons { margin-top: 6px; }
+    .social-icons a{
+      color: var(--gold);
+      margin-right: 10px;
+      font-size: 1.3rem;
+      transition: color .2s ease;
+    }
+    .social-icons a:hover{ color: var(--gold2); }
+
+    .nav a{
+      text-decoration: none;
+      background: var(--gold); color:#333;
+      padding: 12px 18px;
+      border-radius: 10px; font-weight: 700; font-size: 1rem;
+      margin-left: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: background .2s ease, transform .12s ease;
+      display: inline-block;
+    }
+    .nav a:hover{ background: var(--gold2); transform: translateY(-1px); }
+
+    .menu-btn{
+      display: none;
+      background: var(--gold); color:#333;
+      border: 0; border-radius: 10px;
+      padding: 10px 14px; font-size: 1.2rem; font-weight: 800;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    /* 🔹 MOBILNI NAV */
+    @media (max-width: 680px){
+      .menu-btn{ display: inline-flex; align-items:center; justify-content:center; }
+      .nav{
+        position: absolute; top: 52px; right: 12px;
+        background: rgba(255,255,255,0.96);
+        border-radius: 12px;
+        padding: 8px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+        display: none;
+      }
+      .nav a{
+        display: block;
+        margin: 6px 4px;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-size: 1rem;
+        color:#111;
+      }
+      .nav a:hover{ background: rgba(0,0,0,0.06); transform: none; }
+      .contact-info{ font-size: 0.85rem; }
+    }
+    .nav.open{ display: block; }
+
+    /* 🔹 OVERLAY + CONTAINER */
     .overlay{
-      background: rgba(0,0,0,0.45);
+      background: var(--overlay);
       min-height: 100vh;
-      padding: 40px 16px;
+      padding: 100px 16px 40px; /* mjesto za topbar */
     }
     .container{ max-width: 1100px; margin: 0 auto; }
 
-    /* Header */
+    /* 🔹 HEADER */
     .brand{ text-align:center; color: white; margin-bottom: 28px; }
     .brand h1{
       font-family: 'Yesteryear', cursive;
@@ -46,7 +128,7 @@
     }
     .brand p{ margin:0; opacity:.95; }
 
-    /* Kartice */
+    /* 🔹 KARTICE STAVKI */
     .item{
       display: flex;
       gap: 0;
@@ -56,22 +138,15 @@
       box-shadow: var(--shadow);
       margin-bottom: 22px;
       backdrop-filter: blur(2px);
+      color:#1f2937;
     }
     .item-media{
+      position: relative;
       flex: 0 0 340px;
       max-height: 260px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       background: #fff;
-    }
-    .item-media img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display:block;
-      cursor: zoom-in;
     }
     .item-content{
       flex: 1;
@@ -104,24 +179,45 @@
     }
     .muted{ opacity:.9; }
 
-    /* Galerija (za stavku 3) */
+    /* 🔹 GLOBALNI STIL SLIKA (rounded + hover) */
+    .img-rounded {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform .18s ease, box-shadow .18s ease;
+      cursor: zoom-in;
+      display:block;
+    }
+    .img-rounded:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    }
+    .img-cover{ width:100%; height:100%; object-fit: cover; }
+    .aspect-4-3{ aspect-ratio: 4 / 3; }
+
+    /* 🔹 Badge na slici (cijena u kutu) */
+    .badge-on-img{
+      position: absolute;
+      top: 10px; left: 10px;
+      background: rgba(255,221,153,.96);
+      color: #333;
+      font-weight: 800; font-size: .9rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+      z-index: 2;
+    }
+
+    /* 🔹 GALERIJA (stavka 3) */
     .thumbs{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 8px;
       padding: 0 22px 20px 22px;
     }
-    .thumbs img{
-      width: 100%;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: zoom-in;
-      display:block;
-      background:#fff;
-    }
 
-    /* Povratni link */
+    /* 🔹 POVRATAK */
     .back{ text-align:center; margin: 26px 0 6px 0; }
     .back a{
       display:inline-block;
@@ -135,59 +231,144 @@
     }
     .back a:hover{ transform: translateY(-1px); }
 
-    /* Lightbox */
+    /* 🔹 LIGHTBOX */
     .lightbox{
-      position: fixed; inset: 0; background: rgba(0,0,0,.9);
+      position: fixed; inset: 0; background: rgba(0,0,0,.92);
       display: none; align-items: center; justify-content: center;
-      z-index: 99; padding: 20px;
+      z-index: 9990; padding: 20px;
     }
     .lightbox img{
       max-width: 95vw; max-height: 90vh; width: auto; height: auto; display:block;
     }
-    .lightbox.close-hint{
-      cursor: zoom-out;
+
+    /* 🔹 FLOATING ACTIONS (poziv + whatsapp) */
+    .floating-actions{
+      position: fixed;
+      left: 20px; bottom: 20px;
+      display: flex; flex-direction: column; gap: 10px;
+      z-index: 10001;
+    }
+    .fab-btn{
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #333;
+      font-size: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      text-decoration: none;
+      transition: transform .12s ease, background .2s ease;
+    }
+    .fab-btn:hover{ transform: translateY(-2px); background: var(--gold2); }
+    .fab-btn:active{ transform: translateY(0); }
+
+    /* 🔹 RUKOPISNA PORUKA (dolje desno) */
+    .trust-note {
+      position: fixed;
+      bottom: 20px; right: 25px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: rgba(255,255,255,0.9);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      z-index: 10000;
+      animation: fadeIn 3s ease;
+      pointer-events: none;
+    }
+    .trust-note .heart{
+      color: #ff4d6d; font-size: 2rem; margin-left: 6px;
+      display: inline-block; animation: pulse 1.5s infinite;
     }
 
-    /* Responsive */
+    /* 🔹 FOOTER */
+    footer{
+      position: relative; z-index: 2;
+      background: rgba(0,0,0,0.6);
+      padding: 16px 12px; text-align: center;
+      font-size: 0.95rem; margin-top: 16px;
+    }
+    .footer-links{ margin-top: 6px; }
+    .footer-links a{ color: var(--gold); text-decoration: none; margin: 0 8px; }
+    .footer-links a:hover{ color: var(--gold2); }
+
+    /* 🔹 RESPONSIVE */
     @media (max-width: 900px){
       .item{ flex-direction: column; }
       .item-media{ flex-basis: auto; width: 100%; max-height: 240px; }
       .brand h1{ font-size: 2.6rem; }
       .thumbs{ grid-template-columns: repeat(3, 1fr); }
-      .thumbs img{ height: 90px; }
     }
     @media (max-width: 520px){
       .thumbs{ grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* 🔹 Animacije */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
+
+  <!-- 🔹 GORNJA TRAKA -->
+  <div class="topbar">
+    <!-- Lijevo: kontakt + društvene mreže -->
+    <div class="contact-info">
+      <div>📞 099/411-9579</div>
+      <div>✉ info@croteak.com</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61579299665002" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Desno: gumbi + hamburger -->
+    <button class="menu-btn" aria-label="Otvori izbornik" aria-expanded="false">☰</button>
+    <nav class="nav nav-col" id="site-nav" aria-label="Glavna navigacija">
+      <a href="info-cjenik.html">Info Cjenik</a>
+      <a href="zavrseni-radovi.html">Završeni radovi</a>
+      <a href="o-tikovini.html">O Tikovini</a>
+    </nav>
+  </div>
+
+  <!-- 🔹 SADRŽAJ -->
   <div class="overlay">
     <div class="container">
+      <!-- 🔹 HEADER -->
       <header class="brand">
         <h1>CroTeak</h1>
         <p>Info Cjenik – umjetna tikovina za brodove i jahte</p>
       </header>
 
-      <!-- STAVKA 1 -->
+      <!-- 🔹 STAVKA 1 -->
       <section class="item">
         <div class="item-media">
-          <img src="slika1.jpg" alt="Izrada palube od umjetne tikovine" data-full="slika1.jpg">
+          <span class="badge-on-img">170 € / m² + PDV</span>
+          <img src="slika1.jpg" alt="Izrada palube od umjetne tikovine"
+               class="img-rounded img-cover aspect-4-3"
+               loading="lazy" decoding="async" data-full="slika1.jpg">
         </div>
         <div class="item-content">
           <h2>Izrada palube od umjetne tikovine</h2>
-          <span class="price">170 € / m² + PDV (sa otpadom)</span>
           <p class="muted">
             Precizna izrada palubnih panela od umjetne tikovine, optimizirana za trajnost, prianjanje i vizualnu eleganciju.
-            Cijena uključuje obračun s otpadom (pojašnjenje u nastavku).
+            Cijena se obračunava sa otpadom (pojašnjenje u nastavku).
           </p>
         </div>
       </section>
 
-      <!-- STAVKA 2 -->
+      <!-- 🔹 STAVKA 2 -->
       <section class="item">
         <div class="item-media">
-          <img src="slika2.jpg" alt="Ploče za obradu – standardne dimenzije" data-full="slika2.jpg">
+          <img src="slika2.jpg" alt="Ploče za obradu – standardne dimenzije 1200×2400 mm"
+               class="img-rounded img-cover aspect-4-3"
+               loading="lazy" decoding="async" data-full="slika2.jpg">
         </div>
         <div class="item-content">
           <h2>Ploče – standardne dimenzije i obrada</h2>
@@ -199,42 +380,51 @@
         </div>
       </section>
 
-      <!-- STAVKA 3 (GALERIJA 5 SLIKA S LIJEVE STRANE) -->
+      <!-- 🔹 STAVKA 3 (GALERIJA 5 SLIKA) -->
       <section class="item">
         <div class="item-media" style="flex:0 0 360px; display:block; max-height:none; background:transparent;">
           <div class="thumbs">
-            <img src="3d%20skica.png"  alt="3D skica 1"  data-full="3d%20skica.png">
-            <img src="3d%20skica2.png" alt="3D skica 2" data-full="3d%20skica2.png">
-            <img src="3d%20skica3.png" alt="3D skica 3" data-full="3d%20skica3.png">
-            <img src="3d%20skica4.png" alt="3D skica 4" data-full="3d%20skica4.png">
-            <img src="3d%20skica5.png" alt="3D skica 5" data-full="3d%20skica5.png">
+            <img src="3d%20skica.png"  alt="3D skica – varijanta 1"
+                 class="img-rounded img-cover aspect-4-3"
+                 loading="lazy" decoding="async" data-full="3d%20skica.png">
+            <img src="3d%20skica2.png" alt="3D skica – varijanta 2"
+                 class="img-rounded img-cover aspect-4-3"
+                 loading="lazy" decoding="async" data-full="3d%20skica2.png">
+            <img src="3d%20skica3.png" alt="3D skica – varijanta 3"
+                 class="img-rounded img-cover aspect-4-3"
+                 loading="lazy" decoding="async" data-full="3d%20skica3.png">
+            <img src="3d%20skica4.png" alt="3D skica – varijanta 4"
+                 class="img-rounded img-cover aspect-4-3"
+                 loading="lazy" decoding="async" data-full="3d%20skica4.png">
+            <img src="3d%20skica5.png" alt="3D skica – varijanta 5"
+                 class="img-rounded img-cover aspect-4-3"
+                 loading="lazy" decoding="async" data-full="3d%20skica5.png">
           </div>
         </div>
         <div class="item-content">
           <h2>3D grafika / projektiranje palube</h2>
           <span class="price">150 € (samostalna usluga)</span>
           <p class="muted">
-            Izrada 3D grafike (modeliranje i tehnička priprema) naplaćuje se
-            <strong>150 €</strong> kada se naručuje kao zasebna usluga.
-            <br>Ukoliko izradu panela od umjetne tikovine radi CroTeak,
-            <strong>3D grafika je uključena u cijenu po m<sup>2</sup></strong>.
+            Izrada 3D grafike (modeliranje i tehnička priprema) naplaćuje se <strong>150 €</strong> kada se naručuje kao zasebna usluga.
+            Ako CroTeak radi izradu panela, <strong>3D grafika je uključena</strong> u cijenu po m².
           </p>
         </div>
       </section>
 
-      <!-- STAVKA 4 -->
+      <!-- 🔹 STAVKA 4 -->
       <section class="item">
         <div class="item-media">
-          <img src="slika4.jpg" alt="Nesting i optimizacija iskorištenja materijala" data-full="slika4.jpg">
+          <img src="slika4.jpg" alt="Nesting i optimizacija iskorištenja materijala"
+               class="img-rounded img-cover aspect-4-3"
+               loading="lazy" decoding="async" data-full="slika4.jpg">
         </div>
         <div class="item-content">
           <h2>Obračun “sa otpadom” – profesionalni nesting</h2>
           <p class="muted">
-            Nakon točnog mjerenja i definiranja fuga/gravura primjenjujemo
-            <strong>profesionalni nesting</strong>: kompletna geometrija broda slaže se na ploče
-            uz računalnu optimizaciju. Cilj je <strong>minimalni otpad</strong> i maksimalna
-            iskoristivost materijala. Zato se <strong>cijena obračunava sa otpadom</strong> – kupac plaća
-            realnu potrošnju ploča potrebnu za konkretan projekt.
+            Nakon točnog mjerenja i definiranja fuga/gravura primjenjujemo <strong>profesionalni nesting</strong>:
+            kompletna geometrija broda slaže se na ploče uz računalnu optimizaciju.
+            Cilj je <strong>minimalni otpad</strong> i maksimalna iskoristivost materijala.
+            Zato se cijena obračunava <strong>sa otpadom</strong> – plaća se stvarna potrošnja ploča.
           </p>
         </div>
       </section>
@@ -245,34 +435,92 @@
     </div>
   </div>
 
-  <!-- LIGHTBOX -->
+  <!-- 🔹 LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <img id="lightbox-img" alt="">
   </div>
 
+  <!-- 🔹 PLIVAJUĆI GUMBI: POZIV & WHATSAPP -->
+  <div class="floating-actions" aria-label="Brzi kontakt">
+    <a class="fab-btn" href="tel:+385994119579" aria-label="Pozovi odmah">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a class="fab-btn" href="https://wa.me/385994119579" target="_blank" rel="noopener" aria-label="WhatsApp chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- 🔹 RUKOPISNA PORUKA -->
+  <div class="trust-note">
+    Obratite nam se sa povjerenjem <span class="heart">❤</span>
+  </div>
+
+  <!-- 🔹 FOOTER -->
+  <footer>
+    <div>© <span id="year"></span> CroTeak — Sva prava pridržana</div>
+    <div class="footer-links">
+      <a href="index.html">Početna</a> •
+      <a href="info-cjenik.html">Info Cjenik</a> •
+      <a href="zavrseni-radovi.html">Završeni radovi</a> •
+      <a href="o-tikovini.html">O Tikovini</a> •
+      <a href="mailto:info@croteak.com">Kontakt</a>
+    </div>
+  </footer>
+
+  <!-- 🔹 SCRIPTS: nav, lightbox, godina -->
   <script>
-    // Klik na bilo koju sliku s data-full otvara lightbox
-    (function(){
-      const lb = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lightbox-img');
-
-      function openLightbox(src){
-        lbImg.src = src;
-        lb.style.display = 'flex';
-        lb.classList.add('close-hint');
-      }
-      function closeLightbox(){
-        lb.style.display = 'none';
-        lbImg.src = '';
-      }
-
-      document.querySelectorAll('img[data-full]').forEach(img=>{
-        img.addEventListener('click', ()=> openLightbox(img.getAttribute('data-full')));
+  (function(){
+    // NAV (hamburger)
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.getElementById('site-nav');
+    if(btn && nav){
+      btn.addEventListener('click', () => {
+        const opened = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
       });
+      document.addEventListener('click', (e)=>{
+        if(!nav.contains(e.target) && !btn.contains(e.target)){
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape'){
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    }
 
-      lb.addEventListener('click', closeLightbox);
-      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLightbox(); });
-    })();
+    // LIGHTBOX s navigacijom
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const thumbs = Array.from(document.querySelectorAll('img[data-full]'));
+    let idx = -1;
+
+    function openLB(i){
+      idx = i;
+      lbImg.src = thumbs[idx].getAttribute('data-full');
+      lb.style.display = 'flex';
+      lbImg.focus();
+    }
+    function closeLB(){ lb.style.display = 'none'; lbImg.src=''; idx = -1; }
+    function next(){ if(idx < 0) return; idx = (idx + 1) % thumbs.length; lbImg.src = thumbs[idx].getAttribute('data-full'); }
+    function prev(){ if(idx < 0) return; idx = (idx - 1 + thumbs.length) % thumbs.length; lbImg.src = thumbs[idx].getAttribute('data-full'); }
+
+    thumbs.forEach((img, i)=> img.addEventListener('click', ()=> openLB(i)));
+    lb.addEventListener('click', (e)=> { if(e.target === lbImg){ next(); } else { closeLB(); } });
+    document.addEventListener('keydown', (e)=>{
+      if(lb.style.display !== 'flex') return;
+      if(e.key === 'Escape') closeLB();
+      if(e.key === 'ArrowRight') next();
+      if(e.key === 'ArrowLeft') prev();
+    });
+
+    // godina u footeru
+    const y = document.getElementById('year');
+    if(y){ y.textContent = new Date().getFullYear(); }
+  })();
   </script>
 </body>
 </html>
