@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
+  <!-- 🔹 Ikone (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 🔹 Meta / SEO -->
   <meta charset="UTF-8">
-  <title>Završeni radovi - CroTeak</title>
+  <title>Završeni radovi - CroTeak | Primjeri projekata (EVA Foam)</title>
+  <meta name="description" content="Završeni radovi CroTeak: primjeri ugradnje umjetne tikovine (EVA Foam) na brodovima i jahtama. Kliknite na fotografiju za uvećanje.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fontovi -->
+
+  <!-- 🔹 Open Graph -->
+  <meta property="og:title" content="Završeni radovi - CroTeak | Primjeri projekata">
+  <meta property="og:description" content="Primjeri gotovih projekata CroTeak — umjetna tikovina (EVA Foam). Kliknite na fotografiju za uvećanje.">
+  <meta property="og:image" content="https://croteak.github.io/CROTEAKLOGOTRANSPARENT2.png">
+  <meta property="og:url" content="https://croteak.github.io/zavrseni-radovi.html">
+  <meta property="og:type" content="website">
+
+  <!-- 🔹 Fontovi -->
   <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- rukopisni font -->
+
   <style>
     :root{
       --gold:#ffdd99;
       --gold2:#e6c87f;
-      --panel: rgba(185,122,87,.45);
+      --panel: rgba(185,122,87,.45); /* topla poluprozirna pozadina kartica */
       --shadow: 0 8px 22px rgba(0,0,0,.18);
       --overlay: rgba(0,0,0,.55);
       --title:#006d77;
@@ -24,15 +39,20 @@
       font-family: 'Montserrat', sans-serif;
       color:#fff;
     }
+    a{ color: inherit; }
 
-    /* Top bar (isti kao na indexu) */
+    /* 🔹 Gornji bar (usklađen s indexom) */
     .topbar{
       position: fixed;
-      top: 20px; left: 20px; right: 20px;
+      top: 12px; left: 12px; right: 12px;
       display: flex; justify-content: space-between; align-items: flex-start;
-      z-index: 10;
+      z-index: 9999;
     }
     .contact-info{ font-size: 0.9rem; line-height:1.3; color:#eee; }
+    .social-icons{ margin-top:6px; }
+    .social-icons a{ color: var(--gold); margin-right:10px; font-size:1.3rem; transition:color .2s; }
+    .social-icons a:hover{ color: var(--gold2); }
+
     .nav a{
       text-decoration:none; background: var(--gold); color:#333;
       padding:10px 18px; border-radius:10px; font-weight:700; font-size:1rem;
@@ -41,149 +61,180 @@
       display:inline-block;
     }
     .nav a:hover{ background: var(--gold2); transform: translateY(-1px); }
-    .nav-col{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+    .menu-btn{
+      display:none; background: var(--gold); color:#333; border:0; border-radius:10px;
+      padding:10px 14px; font-size:1.2rem; font-weight:800; box-shadow:0 6px 18px rgba(0,0,0,.25);
+    }
+    @media (max-width:680px){
+      .menu-btn{ display:inline-flex; align-items:center; justify-content:center; }
+      .nav{
+        position:absolute; top:52px; right:12px; background:rgba(255,255,255,0.96);
+        border-radius:12px; padding:8px; box-shadow:0 12px 28px rgba(0,0,0,.28); display:none;
+      }
+      .nav a{ display:block; margin:6px 4px; background:transparent; box-shadow:none; border-radius:8px; padding:12px 14px; color:#111; }
+      .nav a:hover{ background: rgba(0,0,0,.06); transform:none; }
+      .contact-info{ font-size:.85rem; }
+    }
+    .nav.open{ display:block; }
 
-    /* Overlay + container */
+    /* 🔹 Overlay + container */
     .overlay{ background: var(--overlay); min-height:100vh; padding: 100px 16px 40px; }
     .container{ max-width: 1200px; margin: 0 auto; }
 
-    /* Naslov stranice */
+    /* 🔹 Naslov stranice */
     header.brand{ text-align:center; margin-bottom: 22px; }
     .brand h1{
-      font-family: 'Yesteryear', cursive;
-      color: var(--gold);
+      font-family: 'Yesteryear', cursive; color: var(--gold);
       font-size: 3rem; margin: 0 0 6px;
     }
     .brand p{ margin:0; opacity:.95; }
 
-    /* Layout projekata: dvije velike kartice pored */
+    /* 🔹 Layout projekata: dvije velike kartice pored (mob: jedna) */
     .projects{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 18px;
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;
     }
 
-    /* Kartica projekta */
+    /* 🔹 Kartica projekta */
     .project{
-      background: var(--panel);
-      color:#1f2937;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 16px;
-      backdrop-filter: blur(2px);
-      display:flex;
-      flex-direction: column;
-      min-height: 420px;
+      background: var(--panel); color:#1f2937;
+      border-radius: 18px; box-shadow: var(--shadow);
+      padding: 16px; backdrop-filter: blur(2px);
+      display:flex; flex-direction: column; min-height: 420px;
     }
-    .project h2{
-      margin: 0 0 10px;
-      font-size: 1.6rem;
-      color: var(--title);
-    }
-    .thumbs{
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 10px;
-    }
-    .thumb{
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      background:#fff;
-      cursor: zoom-in;
-      box-shadow: 0 4px 14px rgba(0,0,0,.08);
-    }
-    .thumb img{
-      display:block; width:100%; height:140px; object-fit: cover;
-      transition: transform .25s ease;
-    }
-    .thumb:hover img{ transform: scale(1.03); }
+    .project h2{ margin: 0 0 10px; font-size: 1.6rem; color: var(--title); }
 
-    /* Lightbox */
+    /* 🔹 Grid fotografija */
+    .thumbs{ display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+    .thumb{ position: relative; overflow: hidden; border-radius: 14px; background:#fff; cursor: zoom-in;
+            border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 14px rgba(0,0,0,.08);
+            transition: transform .18s ease, box-shadow .18s ease; }
+    .thumb:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.18); }
+    .thumb img{ display:block; width:100%; height:140px; object-fit: cover; }
+    .aspect-4-3{ aspect-ratio: 4 / 3; } /* po želji */
+
+    /* 🔹 Lightbox */
     .lightbox{
-      position: fixed; inset:0; display:none;
-      align-items: center; justify-content: center;
-      background: rgba(0,0,0,.92); z-index: 99; padding: 20px;
+      position: fixed; inset:0; display:none; align-items: center; justify-content: center;
+      background: rgba(0,0,0,.92); z-index: 9990; padding: 20px;
     }
     .lightbox img{ max-width: 95vw; max-height: 90vh; display:block; }
 
-    /* Povratak */
+    /* 🔹 Povratak */
     .back{ text-align:center; margin-top: 18px; }
     .back a{
       text-decoration:none; background: var(--gold); color:#333;
-      padding:10px 18px; border-radius:10px; font-weight:700;
-      box-shadow: 0 6px 18px rgba(0,0,0,.2);
+      padding:10px 18px; border-radius:10px; font-weight:700; box-shadow: 0 6px 18px rgba(0,0,0,.2);
     }
     .back a:hover{ background: var(--gold2); }
 
-    /* Responsivnost */
-    @media (max-width: 1100px){
-      .thumb img{ height:130px; }
+    /* 🔹 Floating actions (poziv + WhatsApp) */
+    .floating-actions{
+      position: fixed; left: 20px; bottom: 20px;
+      display: flex; flex-direction: column; gap: 10px; z-index: 10001;
     }
-    @media (max-width: 900px){
-      .projects{ grid-template-columns: 1fr; }
-      .brand h1{ font-size: 2.4rem; }
+    .fab-btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:52px; height:52px; border-radius:50%;
+      background: var(--gold); color:#333; font-size:22px;
+      box-shadow:0 8px 24px rgba(0,0,0,.25);
+      text-decoration:none; transition: transform .12s ease, background .2s ease;
     }
-    @media (max-width: 560px){
-      .thumbs{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .thumb img{ height:120px; }
-      .nav a{ font-size:.9rem; padding:8px 14px; }
-      .contact-info{ font-size:.8rem; }
+    .fab-btn:hover{ transform: translateY(-2px); background: var(--gold2); }
+    .fab-btn:active{ transform: translateY(0); }
+
+    /* 🔹 Rukopisna poruka dolje desno */
+    .trust-note{
+      position: fixed; bottom: 20px; right: 25px;
+      font-family: 'Great Vibes', cursive; font-size: 1.8rem;
+      color: rgba(255,255,255,0.9); text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      z-index: 10000; animation: fadeIn 3s ease; pointer-events: none;
     }
+    .trust-note .heart{ color:#ff4d6d; font-size:2rem; margin-left:6px; display:inline-block; animation: pulse 1.5s infinite; }
+
+    /* 🔹 Footer */
+    footer{
+      position: relative; z-index: 2; background: rgba(0,0,0,0.6);
+      padding: 16px 12px; text-align:center; font-size:.95rem; margin-top:16px;
+    }
+    .footer-links{ margin-top:6px; }
+    .footer-links a{ color: var(--gold); text-decoration: none; margin: 0 8px; }
+    .footer-links a:hover{ color: var(--gold2); }
+
+    /* 🔹 Animacije */
+    @keyframes fadeIn{ from{opacity:0; transform: translateY(20px);} to{opacity:1; transform: translateY(0);} }
+    @keyframes pulse{ 0%{transform:scale(1);} 50%{transform:scale(1.25);} 100%{transform:scale(1);} }
+
+    /* 🔹 Responsivnost */
+    @media (max-width: 1100px){ .thumb img{ height:130px; } }
+    @media (max-width: 900px){ .projects{ grid-template-columns: 1fr; } .brand h1{ font-size: 2.4rem; } }
+    @media (max-width: 560px){ .thumbs{ grid-template-columns: repeat(2, minmax(0,1fr)); } .thumb img{ height:120px; } }
   </style>
 </head>
 <body>
 
-  <!-- Gornja traka -->
+  <!-- 🔹 Gornja traka -->
   <div class="topbar">
     <div class="contact-info">
       <div>📞 099/411-9579</div>
-      <div>✉ valentino.soban@gmail.com</div>
+      <div>✉ info@croteak.com</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61579299665002" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+      </div>
     </div>
-    <div class="nav nav-col">
+
+    <button class="menu-btn" aria-label="Otvori izbornik" aria-expanded="false">☰</button>
+    <nav class="nav nav-col" id="site-nav" aria-label="Glavna navigacija">
       <a href="info-cjenik.html">Info Cjenik</a>
       <a href="zavrseni-radovi.html">Završeni radovi</a>
       <a href="o-tikovini.html">O Tikovini</a>
-    </div>
+    </nav>
   </div>
 
   <div class="overlay">
     <div class="container">
       <header class="brand">
         <h1>Završeni radovi</h1>
-        <p>Primjeri gotovih projekata CroTeak – kliknite sliku za uvećanje.</p>
+        <p>Primjeri gotovih projekata CroTeak – kliknite fotografiju za uvećanje.</p>
       </header>
 
-      <!-- DVA PROJEKTA JEDAN DO DRUGOG -->
+      <!-- 🔹 DVA PROJEKTA -->
       <section class="projects">
 
-        <!-- PROJEKT 1 -->
+        <!-- ✅ PROJEKT 1 -->
         <article class="project">
           <h2>Merry Fisher 625</h2>
           <div class="thumbs">
-            <!-- zamijeni imena na svoja -->
-            <div class="thumb"><img src="mf625-1.jpg" alt="Merry Fisher 625 - 1" data-full="mf625-1.jpg"></div>
-            <div class="thumb"><img src="mf625-2.jpg" alt="Merry Fisher 625 - 2" data-full="mf625-2.jpg"></div>
-            <div class="thumb"><img src="mf625-3.jpg" alt="Merry Fisher 625 - 3" data-full="mf625-3.jpg"></div>
-            
+            <div class="thumb aspect-4-3">
+              <img src="mf625-1.jpg" alt="Merry Fisher 625 – detalj palube (1)"
+                   loading="lazy" decoding="async" data-full="mf625-1.jpg">
+            </div>
+            <div class="thumb aspect-4-3">
+              <img src="mf625-2.jpg" alt="Merry Fisher 625 – detalj palube (2)"
+                   loading="lazy" decoding="async" data-full="mf625-2.jpg">
+            </div>
+            <div class="thumb aspect-4-3">
+              <img src="mf625-3.jpg" alt="Merry Fisher 625 – detalj palube (3)"
+                   loading="lazy" decoding="async" data-full="mf625-3.jpg">
+            </div>
           </div>
         </article>
 
-        <!-- PROJEKT 2 -->
+        <!-- ✅ PROJEKT 2 -->
         <article class="project">
           <h2>Gobby Fisherman</h2>
           <div class="thumbs">
-            <!-- zamijeni imena na svoja -->
-            <div class="thumb"><img src="rad1.jpg" alt="Gobby Fisherman - 1" data-full="rad1.jpg"></div>
-            <div class="thumb"><img src="rad2.jpg" alt="Gobby Fisherman - 2" data-full="rad2.jpg"></div>
-            <div class="thumb"><img src="rad3.jpg" alt="Gobby Fisherman - 3" data-full="rad3.jpg"></div>
-            <div class="thumb"><img src="rad4.jpg" alt="Gobby Fisherman - 4" data-full="rad4.jpg"></div>
-            <div class="thumb"><img src="rad5.jpg" alt="Gobby Fisherman - 5" data-full="rad5.jpg"></div>
-            <div class="thumb"><img src="rad6.jpg" alt="Gobby Fisherman - 6" data-full="rad6.jpg"></div>
-            <div class="thumb"><img src="rad7.jpg" alt="Gobby Fisherman - 6" data-full="rad7.jpg"></div>
-            <div class="thumb"><img src="rad8.jpg" alt="Gobby Fisherman - 6" data-full="rad8.jpg"></div>
-            <div class="thumb"><img src="rad9.jpg" alt="Gobby Fisherman - 6" data-full="rad9.jpg"></div>
-            <div class="thumb"><img src="rad10.jpg" alt="Gobby Fisherman - 6" data-full="rad10.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad1.jpg"  alt="Gobby Fisherman – 1"  loading="lazy" decoding="async" data-full="rad1.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad2.jpg"  alt="Gobby Fisherman – 2"  loading="lazy" decoding="async" data-full="rad2.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad3.jpg"  alt="Gobby Fisherman – 3"  loading="lazy" decoding="async" data-full="rad3.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad4.jpg"  alt="Gobby Fisherman – 4"  loading="lazy" decoding="async" data-full="rad4.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad5.jpg"  alt="Gobby Fisherman – 5"  loading="lazy" decoding="async" data-full="rad5.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad6.jpg"  alt="Gobby Fisherman – 6"  loading="lazy" decoding="async" data-full="rad6.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad7.jpg"  alt="Gobby Fisherman – 7"  loading="lazy" decoding="async" data-full="rad7.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad8.jpg"  alt="Gobby Fisherman – 8"  loading="lazy" decoding="async" data-full="rad8.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad9.jpg"  alt="Gobby Fisherman – 9"  loading="lazy" decoding="async" data-full="rad9.jpg"></div>
+            <div class="thumb aspect-4-3"><img src="rad10.jpg" alt="Gobby Fisherman – 10" loading="lazy" decoding="async" data-full="rad10.jpg"></div>
           </div>
         </article>
 
@@ -195,25 +246,88 @@
     </div>
   </div>
 
-  <!-- LIGHTBOX -->
+  <!-- 🔹 LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <img id="lightbox-img" alt="">
   </div>
 
-  <script>
-    // Lightbox: klik na thumbnail otvara veliku sliku
-    (function(){
-      const lb = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lightbox-img');
-      function openLB(src){ lbImg.src = src; lb.style.display = 'flex'; }
-      function closeLB(){ lb.style.display = 'none'; lbImg.src=''; }
+  <!-- 🔹 Floating gumbi: poziv & WhatsApp -->
+  <div class="floating-actions" aria-label="Brzi kontakt">
+    <a class="fab-btn" href="tel:+385994119579" aria-label="Pozovi odmah">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a class="fab-btn" href="https://wa.me/385994119579" target="_blank" rel="noopener" aria-label="WhatsApp chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
 
-      document.querySelectorAll('img[data-full]').forEach(img=>{
-        img.addEventListener('click', ()=> openLB(img.getAttribute('data-full')));
+  <!-- 🔹 Rukopisna poruka -->
+  <div class="trust-note">
+    Obratite nam se sa povjerenjem <span class="heart">❤</span>
+  </div>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    <div>© <span id="year"></span> CroTeak — Sva prava pridržana</div>
+    <div class="footer-links">
+      <a href="index.html">Početna</a> •
+      <a href="info-cjenik.html">Info Cjenik</a> •
+      <a href="zavrseni-radovi.html">Završeni radovi</a> •
+      <a href="o-tikovini.html">O Tikovini</a> •
+      <a href="mailto:info@croteak.com">Kontakt</a>
+    </div>
+  </footer>
+
+  <!-- 🔹 Skripte: nav, lightbox (sa strelicama), godina -->
+  <script>
+  (function(){
+    // NAV (hamburger)
+    const btn = document.querySelector('.menu-btn');
+    const nav = document.getElementById('site-nav');
+    if(btn && nav){
+      btn.addEventListener('click', () => {
+        const opened = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
       });
-      lb.addEventListener('click', closeLB);
-      document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
-    })();
+      document.addEventListener('click', (e)=>{
+        if(!nav.contains(e.target) && !btn.contains(e.target)){
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape'){
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+
+    // LIGHTBOX s navigacijom (klik na sliku = next, ← → rade)
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const thumbs = Array.from(document.querySelectorAll('img[data-full]'));
+    if(lb && lbImg && thumbs.length){
+      let idx = -1;
+      function openLB(i){ idx = i; lbImg.src = thumbs[idx].getAttribute('data-full'); lb.style.display = 'flex'; lbImg.focus(); }
+      function closeLB(){ lb.style.display = 'none'; lbImg.src=''; idx = -1; }
+      function next(){ if(idx<0) return; idx = (idx + 1) % thumbs.length; lbImg.src = thumbs[idx].getAttribute('data-full'); }
+      function prev(){ if(idx<0) return; idx = (idx - 1 + thumbs.length) % thumbs.length; lbImg.src = thumbs[idx].getAttribute('data-full'); }
+
+      thumbs.forEach((img,i)=> img.addEventListener('click', ()=> openLB(i)));
+      lb.addEventListener('click', (e)=> { if(e.target === lbImg){ next(); } else { closeLB(); } });
+      document.addEventListener('keydown', (e)=>{
+        if(lb.style.display !== 'flex') return;
+        if(e.key === 'Escape') closeLB();
+        if(e.key === 'ArrowRight') next();
+        if(e.key === 'ArrowLeft') prev();
+      });
+    }
+
+    // godina u footeru
+    const y = document.getElementById('year');
+    if(y){ y.textContent = new Date().getFullYear(); }
+  })();
   </script>
 </body>
 </html>
