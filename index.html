@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <!-- Ikone (Font Awesome) -->
+  <!-- 🔹 Ikone (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- SEO meta podaci -->
+  <!-- 🔹 SEO meta podaci -->
+  <meta charset="UTF-8">
+  <title>CroTeak - Umjetna tikovina | EVA Foam rješenja za brodove i jahte</title>
   <meta name="description" content="CroTeak - izrada i obrada umjetne tikovine od EVA foam materijala za brodove i jahte. Završeni radovi, info cjenik i kontakt.">
   <meta name="keywords" content="CroTeak, umjetna tikovina, EVA foam, brodovi, jahte, paluba">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔹 Google verifikacija -->
   <meta name="google-site-verification" content="94d4b4ab21687c42" /> 
   <meta name="google-site-verification" content="0v2do-ae2EwxzOXzWdrvYT47CTajWWIfSa9LMc1gkIc" />
 
-  <meta charset="UTF-8">
-  <title>CroTeak - Umjetna tikovina | EVA Foam rješenja za brodove i jahte</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 🔹 Open Graph (ljepši share na društvenim mrežama) -->
+  <meta property="og:title" content="CroTeak - Umjetna tikovina | EVA Foam rješenja za brodove i jahte">
+  <meta property="og:description" content="Izrada i obrada umjetne tikovine (EVA foam) za brodove i jahte. Pogledajte završene radove, info cjenik i kontakt.">
+  <meta property="og:image" content="https://croteak.github.io/CROTEAKLOGOTRANSPARENT2.png">
+  <meta property="og:url" content="https://croteak.github.io/">
+  <meta property="og:type" content="website">
 
-  <!-- Favicon (zamijeni logo.png svojim malim logom ako imaš) -->
+  <!-- 🔹 Favicon (može biti i .ico) -->
   <link rel="icon" href="CROTEAKLOGOTRANSPARENT2.png" type="image/png">
 
-  <!-- Fontovi -->
+  <!-- 🔹 Fontovi -->
   <link href="https://fonts.cdnfonts.com/css/yesteryear" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <!-- rukopisni font -->
@@ -27,8 +35,11 @@
       --gold:#ffdd99;
       --gold-hover:#e6c87f;
       --overlay: rgba(0,0,0,0.55);
+      --white: #ffffff;
+      --dark: #111;
     }
 
+    /* 🔹 OPĆE */
     body{
       margin:0;
       background: url('background.jpg') no-repeat center center fixed;
@@ -36,32 +47,28 @@
       font-family: 'Montserrat', sans-serif;
       color: #fff;
     }
+    a{ color: inherit; }
 
-    /* Top bar */
+    /* 🔹 GORNJA NAVIGACIJA (Top bar) */
     .topbar{
       position: fixed;
       top: 12px; left: 12px; right: 12px;
       display: flex; align-items: flex-start; justify-content: space-between;
       z-index: 9999;
     }
-
-    /* Kontakt lijevo */
     .contact-info{ font-size: 0.9rem; line-height: 1.3; color:#eee; }
-
-    /* Ikone društvenih mreža */
     .social-icons { margin-top: 6px; }
     .social-icons a {
-      color: #ffdd99;
+      color: var(--gold);
       margin-right: 10px;
       font-size: 1.3rem;
       transition: color 0.2s ease;
     }
-    .social-icons a:hover { color: #e6c87f; }
+    .social-icons a:hover { color: var(--gold-hover); }
 
-    /* Navigacija (desktop) */
     .nav a{
       text-decoration: none;
-      background: #ffdd99; color:#333;
+      background: var(--gold); color:#333;
       padding: 12px 18px;
       border-radius: 10px; font-weight: 700; font-size: 1rem;
       margin-left: 10px;
@@ -69,21 +76,19 @@
       transition: background .2s ease, transform .12s ease;
       display: inline-block;
     }
-    .nav a:hover{ background:#e6c87f; transform: translateY(-1px); }
+    .nav a:hover{ background: var(--gold-hover); transform: translateY(-1px); }
 
-    /* Hamburger gumb (skriven na desktopu) */
     .menu-btn{
       display: none;
-      background: #ffdd99; color:#333;
+      background: var(--gold); color:#333;
       border: 0; border-radius: 10px;
       padding: 10px 14px; font-size: 1.2rem; font-weight: 800;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
 
-    /* MOBILNI prikaz */
+    /* 🔹 MOBILNI NAV */
     @media (max-width: 680px){
       .menu-btn{ display: inline-flex; align-items:center; justify-content:center; }
-
       .nav{
         position: absolute; top: 52px; right: 12px;
         background: rgba(255,255,255,0.96);
@@ -105,11 +110,9 @@
       .nav a:hover{ background: rgba(0,0,0,0.06); transform: none; }
       .contact-info{ font-size: 0.85rem; }
     }
-
-    /* Klasa koja otvara meni */
     .nav.open{ display: block; }
 
-    /* Overlay */
+    /* 🔹 HERO */
     .overlay{
       background: var(--overlay);
       min-height: 100vh;
@@ -118,8 +121,6 @@
       text-align: center;
       padding: 80px 16px 40px;
     }
-
-    /* Hero */
     .hero{
       max-width: 900px;
       margin: 0 auto;
@@ -159,7 +160,7 @@
       .contact-info{ font-size: 0.8rem; }
     }
 
-    /* 🔹 Poruka u donjem desnom kutu */
+    /* 🔹 PORUKA DOLJE DESNO (rukopis) */
     .trust-note {
       position: fixed;
       bottom: 20px;
@@ -170,6 +171,7 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.4);
       z-index: 10000;
       animation: fadeIn 3s ease;
+      pointer-events: none; /* da ne smeta klikovima na mobitelu */
     }
     .trust-note .heart {
       color: #ff4d6d;
@@ -179,7 +181,50 @@
       animation: pulse 1.5s infinite;
     }
 
-    /* Animacije */
+    /* 🔹 PLIVAJUĆI GUMBI: POZIV & WHATSAPP (dolje lijevo) */
+    .floating-actions{
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 10001;
+    }
+    .fab-btn{
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #333;
+      font-size: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.25);
+      text-decoration: none;
+      transition: transform .12s ease, background .2s ease;
+    }
+    .fab-btn:hover{ transform: translateY(-2px); background: var(--gold-hover); }
+    .fab-btn:active{ transform: translateY(0); }
+
+    /* 🔹 FOOTER */
+    footer{
+      position: relative;
+      z-index: 2;
+      background: rgba(0,0,0,0.6);
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    .footer-links{
+      margin-top: 6px;
+    }
+    .footer-links a{
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    .footer-links a:hover{ color: var(--gold-hover); }
+
+    /* 🔹 Animacije */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -193,14 +238,14 @@
 </head>
 <body>
 
-<!-- 🔹 Gornja traka -->
+<!-- 🔹 GORNJA TRAKA -->
 <div class="topbar">
   <!-- Lijevo: kontakt + društvene mreže -->
   <div class="contact-info">
     <div>📞 099/411-9579</div>
     <div>✉ info@croteak.com</div>
     <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61579299665002" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=61579299665002" target="_blank" rel="noopener" aria-label="Facebook">
         <i class="fab fa-facebook fa-lg"></i>
       </a>
     </div>
@@ -209,17 +254,17 @@
   <!-- Desno: gumbi + hamburger -->
   <button class="menu-btn" aria-label="Otvori izbornik" aria-expanded="false">☰</button>
 
-  <nav class="nav nav-col" id="site-nav">
+  <nav class="nav nav-col" id="site-nav" aria-label="Glavna navigacija">
     <a href="info-cjenik.html">Info Cjenik</a>
     <a href="zavrseni-radovi.html">Završeni radovi</a>
     <a href="o-tikovini.html">O Tikovini</a>
   </nav>
 </div>
 
-<!-- 🔹 Hero sekcija -->
+<!-- 🔹 HERO SEKCIJA -->
 <div class="overlay">
   <div class="hero">
-    <img src="CROTEAKLOGOTRANSPARENT2.png" alt="CroTeak logo" class="logo">
+    <img src="CROTEAKLOGOTRANSPARENT2.png" alt="CroTeak logo" class="logo" loading="lazy">
     <p class="subtitle">
       Dobrodošli na službenu stranicu CroTeak.<br>
       Izrada i obrada umjetne tikovine za brodove i jahte.
@@ -228,36 +273,58 @@
   </div>
 </div>
 
-<!-- 🔹 Poruka u dnu desno -->
+<!-- 🔹 PORUKA DOLJE DESNO (rukopis) -->
 <div class="trust-note">
   Obratite nam se sa povjerenjem <span class="heart">❤</span>
 </div>
 
-<!-- 🔹 Skripta za hamburger meni -->
+<!-- 🔹 PLIVAJUĆI GUMBI: POZIV & WHATSAPP -->
+<div class="floating-actions" aria-label="Brzi kontakt">
+  <a class="fab-btn" href="tel:+385994119579" aria-label="Pozovi odmah">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+  <a class="fab-btn" href="https://wa.me/385994119579" target="_blank" rel="noopener" aria-label="WhatsApp chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer>
+  <div>© <span id="year"></span> CroTeak — Sva prava pridržana</div>
+  <div class="footer-links">
+    <a href="info-cjenik.html">Info Cjenik</a> •
+    <a href="zavrseni-radovi.html">Završeni radovi</a> •
+    <a href="o-tikovini.html">O Tikovini</a> •
+    <a href="mailto:info@croteak.com">Kontakt</a>
+  </div>
+</footer>
+
+<!-- 🔹 Skripta za hamburger meni + godina u footeru -->
 <script>
 (function(){
   const btn = document.querySelector('.menu-btn');
   const nav = document.getElementById('site-nav');
-  if(!btn || !nav) return;
-
-  btn.addEventListener('click', () => {
-    const opened = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
-  });
-
-  document.addEventListener('click', (e)=>{
-    if(!nav.contains(e.target) && !btn.contains(e.target)){
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-  });
-
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === 'Escape'){
-      nav.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-  });
+  if(btn && nav){
+    btn.addEventListener('click', () => {
+      const opened = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e)=>{
+      if(!nav.contains(e.target) && !btn.contains(e.target)){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+  // godina u footeru
+  const y = document.getElementById('year');
+  if(y){ y.textContent = new Date().getFullYear(); }
 })();
 </script>
 
