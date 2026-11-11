@@ -309,5 +309,69 @@
         "source": "mf625-3.jpg"
       }
     ]
+  },
+  {
+    "slug": "benetau-sunday-520",
+    "title": "Benetau Sunday 520",
+    "subtitle": "Teak obloga s osobnim potpisom",
+    "description": "Topli teak tonovi, crne linije i personalizirana gravura M&M. EVA paneli prate pramčanu palubu i bočne prolaze uz kabinu.",
+    "tone": "teak",
+    "cover": 5,
+    "photos": [
+      {
+        "src": "assets/images/benetau-sunday-520/01.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/benetau-sunday-520/01-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Pogled na pramčane i bočne EVA panele uz kabinu",
+        "source": "412.jpeg"
+      },
+      {
+        "src": "assets/images/benetau-sunday-520/02.webp",
+        "width": 960,
+        "height": 960,
+        "small": "assets/images/benetau-sunday-520/02-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Brod na vezu u marini",
+        "source": "798664476_28666349349649673_3075830720965099132_n.jpg"
+      },
+      {
+        "src": "assets/images/benetau-sunday-520/03.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/benetau-sunday-520/03-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Detalj bočne obloge i gravure M&M ispod vjetrobranskog stakla",
+        "source": "WhatsApp Image 2026-11-11 at 15.38.2239.jpeg"
+      },
+      {
+        "src": "assets/images/benetau-sunday-520/04.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/benetau-sunday-520/04-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Pogled odozgo na pramčanu palubu s oblogom po mjeri",
+        "source": "WhatsApp Image 2026-11-11 at 15.38.329.jpeg"
+      },
+      {
+        "src": "assets/images/benetau-sunday-520/05.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/benetau-sunday-520/05-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Cijeli pramčani dio broda s postavljenim EVA panelima",
+        "source": "WhatsApp Image 2026-11-11 at 15.38.39.jpeg"
+      },
+      {
+        "src": "assets/images/benetau-sunday-520/06.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/benetau-sunday-520/06-small.webp",
+        "smallWidth": 640,
+        "alt": "Benetau Sunday 520 — Detalji pramčane obloge, obruba i bočnih prolaza",
+        "source": "WhatsApp Image 2026-11-11 at 15.38.392.jpeg"
+      }
+    ]
   }
 ]

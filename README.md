@@ -25,7 +25,7 @@ Galerije rade i bez JavaScripta: fotografije se tada otvaraju kao poveznice. S J
 
 Izvorne fotografije, CAD slike, logotipi, Google verifikacija i `info-cjenik.html` ostaju u repozitoriju. Cjenik se ne nalazi ni u jednom novom izborniku ni u sitemapu. Stara adresa `prodim-proliner.html` i dalje preusmjerava na `proliner.html`.
 
-U galeriji je svih 13 prijašnjih fotografija (Merry Fisher 625 i Gobby Fisherman) te 16 dodatnih fotografija. Dvije različite izvedbe Merry Fishera 625 prikazane su u zasebnim albumima. Originalne datoteke nisu prepisane optimiziranim verzijama.
+Izvorna galerija (Merry Fisher 625 i Gobby Fisherman) sačuvana je u cijelosti i dopunjena novim projektima. Aktualni albumi i fotografije nalaze se u `data/projects.json`. Dvije različite izvedbe Merry Fishera 625 prikazane su u zasebnim albumima. Originalne datoteke nisu prepisane optimiziranim verzijama.
 
 Tehničke vrijednosti EVA materijala prenesene su iz prijašnje stranice. Nije dodan novi certifikat ni jamstvo. Izostavljena je prijašnja izravna pretvorba 3000 sati UV testa u tvrdnju o 5–7 godina trajanja, jer ta veza nije potkrijepljena ispitnim izvještajem. Svojstva konkretne varijante treba potvrditi prije narudžbe.
 
