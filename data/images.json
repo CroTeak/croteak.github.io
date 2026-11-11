@@ -47,5 +47,14 @@
     "height": 1200,
     "small": "assets/images/hero-small.webp",
     "smallWidth": 640
+  },
+  "arvor-design": {
+    "src": "assets/images/arvor-215-as/dizajn.webp",
+    "width": 884,
+    "height": 1600,
+    "small": "assets/images/arvor-215-as/dizajn-small.webp",
+    "smallWidth": 497,
+    "alt": "Arvor 215 AS — originalni digitalni dizajn rasporeda panela i kompasne gravure",
+    "source": "WhatsApp Image 2026-08-06 at 15.16.42.jpeg"
   }
 }

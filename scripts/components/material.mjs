@@ -1,0 +1,5 @@
+export function qualitySection({material,projects,img,link,page=false}) {
+  const project=projects.find(p=>p.slug==='arvor-215-as');
+  const heading=page?'h1':'h2';
+  return `<section class="section quality-section${page?' quality-page':''}"><div class="wrap"><div class="quality-heading"><span class="eyebrow">CroTeak / Materijal koji biramo</span><${heading}>NIJE SVAKA EVA<br><em>TIKOVINA ISTA.</em></${heading}><p class="lead">${material.intro}</p></div><div class="quality-layout"><figure class="quality-photo">${img(project.photos[5],project.photos[5].alt,{eager:page})}<figcaption>Stvarni detalj izrade za Arvor 215 AS — linije, obrub i personalizirani kompas.</figcaption></figure><div><div class="quality-features">${material.features.map((f,i)=>`<article><span>0${i+1}</span><div><h3>${f.title}</h3><p>${f.text}</p></div></article>`).join('')}</div><div class="quality-links">${link(page?'Odaberite svoju kombinaciju':'Upoznajte naš EVA materijal',page?'paleta-boja.html':'o-tikovini.html')}${link('Pogledajte CNC proces','proliner.html#proizvodnja')}</div></div></div></div></section>`;
+}

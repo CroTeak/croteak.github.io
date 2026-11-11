@@ -1,0 +1,415 @@
+{
+  "source": "Dostavljeni katalog COLOR OPTIONS, NC-1 do NC-24, i fotografija fizičkih uzoraka u istom rasporedu.",
+  "availabilityNote": "Kataloška kombinacija. Dostupnost materijala i rok izrade potvrđujemo pri upitu.",
+  "previewNote": "Shematski prikaz palube služi za usporedbu kombinacija. Nijanse ovise o fotografiji i zaslonu; konačan odabir potvrdite na fizičkom uzorku.",
+  "colors": [
+    {
+      "code": "NC-1",
+      "name": "Teak + Black",
+      "label": "Teak / Crna",
+      "top": "Teak",
+      "bottom": "Crna",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-1.webp",
+      "width": 250,
+      "height": 239,
+      "availability": null,
+      "preview": {
+        "top": "#b68947",
+        "bottom": "#ad8a55",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-2",
+      "name": "Teak + White",
+      "label": "Teak / Bijela",
+      "top": "Teak",
+      "bottom": "Bijela",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-2.webp",
+      "width": 246,
+      "height": 240,
+      "availability": null,
+      "preview": {
+        "top": "#c49854",
+        "bottom": "#dbdfe1",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-3",
+      "name": "Light Brown + Black",
+      "label": "Svijetlosmeđa / Crna",
+      "top": "Svijetlosmeđa",
+      "bottom": "Crna",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-3.webp",
+      "width": 247,
+      "height": 238,
+      "availability": null,
+      "preview": {
+        "top": "#966638",
+        "bottom": "#120b08",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-4",
+      "name": "Light Brown + Teak",
+      "label": "Svijetlosmeđa / Teak",
+      "top": "Svijetlosmeđa",
+      "bottom": "Teak",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-4.webp",
+      "width": 249,
+      "height": 242,
+      "availability": null,
+      "preview": {
+        "top": "#936334",
+        "bottom": "#b18142",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-5",
+      "name": "Light Brown + White",
+      "label": "Svijetlosmeđa / Bijela",
+      "top": "Svijetlosmeđa",
+      "bottom": "Bijela",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-5.webp",
+      "width": 249,
+      "height": 242,
+      "availability": null,
+      "preview": {
+        "top": "#8d5d32",
+        "bottom": "#8b5e33",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-6",
+      "name": "Dark Brown + Black",
+      "label": "Tamnosmeđa / Crna",
+      "top": "Tamnosmeđa",
+      "bottom": "Crna",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-6.webp",
+      "width": 255,
+      "height": 239,
+      "availability": null,
+      "preview": {
+        "top": "#713c2e",
+        "bottom": "#171519",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-7",
+      "name": "Light Grey + Black",
+      "label": "Svijetlosiva / Crna",
+      "top": "Svijetlosiva",
+      "bottom": "Crna",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-7.webp",
+      "width": 255,
+      "height": 246,
+      "availability": null,
+      "preview": {
+        "top": "#9c9fa8",
+        "bottom": "#0f0d0f",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-8",
+      "name": "Light Grey + White",
+      "label": "Svijetlosiva / Bijela",
+      "top": "Svijetlosiva",
+      "bottom": "Bijela",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-8.webp",
+      "width": 251,
+      "height": 244,
+      "availability": null,
+      "preview": {
+        "top": "#a4a5aa",
+        "bottom": "#dde5ec",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-9",
+      "name": "Light Grey + Aqua Green",
+      "label": "Svijetlosiva / Aqua zelena",
+      "top": "Svijetlosiva",
+      "bottom": "Aqua zelena",
+      "family": "Akcentne boje",
+      "image": "assets/images/colors/nc-9.webp",
+      "width": 247,
+      "height": 246,
+      "availability": null,
+      "preview": {
+        "top": "#a2a5aa",
+        "bottom": "#27b08a",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-10",
+      "name": "Light Grey + Blue",
+      "label": "Svijetlosiva / Plava",
+      "top": "Svijetlosiva",
+      "bottom": "Plava",
+      "family": "Akcentne boje",
+      "image": "assets/images/colors/nc-10.webp",
+      "width": 250,
+      "height": 247,
+      "availability": null,
+      "preview": {
+        "top": "#a7aab3",
+        "bottom": "#0648ad",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-11",
+      "name": "Light Grey + Navy Blue",
+      "label": "Svijetlosiva / Tamnoplava",
+      "top": "Svijetlosiva",
+      "bottom": "Tamnoplava",
+      "family": "Akcentne boje",
+      "image": "assets/images/colors/nc-11.webp",
+      "width": 254,
+      "height": 247,
+      "availability": null,
+      "preview": {
+        "top": "#9b9ea5",
+        "bottom": "#122341",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-12",
+      "name": "Med Grey + Black",
+      "label": "Srednje siva / Crna",
+      "top": "Srednje siva",
+      "bottom": "Crna",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-12.webp",
+      "width": 253,
+      "height": 247,
+      "availability": null,
+      "preview": {
+        "top": "#848993",
+        "bottom": "#18191c",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-13",
+      "name": "Mid Grey + Orange",
+      "label": "Srednje siva / Narančasta",
+      "top": "Srednje siva",
+      "bottom": "Narančasta",
+      "family": "Akcentne boje",
+      "image": "assets/images/colors/nc-13.webp",
+      "width": 262,
+      "height": 259,
+      "availability": null,
+      "preview": {
+        "top": "#6a6e79",
+        "bottom": "#f47315",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-14",
+      "name": "Dark Grey + Black",
+      "label": "Tamnosiva / Crna",
+      "top": "Tamnosiva",
+      "bottom": "Crna",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-14.webp",
+      "width": 257,
+      "height": 255,
+      "availability": null,
+      "preview": {
+        "top": "#3d444c",
+        "bottom": "#2d2d32",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-15",
+      "name": "Dark Grey + Light Grey",
+      "label": "Tamnosiva / Svijetlosiva",
+      "top": "Tamnosiva",
+      "bottom": "Svijetlosiva",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-15.webp",
+      "width": 254,
+      "height": 257,
+      "availability": null,
+      "preview": {
+        "top": "#434a52",
+        "bottom": "#83888c",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-16",
+      "name": "Black + Red",
+      "label": "Crna / Crvena",
+      "top": "Crna",
+      "bottom": "Crvena",
+      "family": "Akcentne boje",
+      "image": "assets/images/colors/nc-16.webp",
+      "width": 251,
+      "height": 259,
+      "availability": null,
+      "preview": {
+        "top": "#05080d",
+        "bottom": "#771626",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-17",
+      "name": "Light Brown + Sand",
+      "label": "Svijetlosmeđa / Pješčana",
+      "top": "Svijetlosmeđa",
+      "bottom": "Pješčana",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-17.webp",
+      "width": 255,
+      "height": 255,
+      "availability": null,
+      "preview": {
+        "top": "#9a673c",
+        "bottom": "#eddbbf",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-18",
+      "name": "Smoke Grey + Black",
+      "label": "Dimno siva / Crna",
+      "top": "Dimno siva",
+      "bottom": "Crna",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-18.webp",
+      "width": 252,
+      "height": 256,
+      "availability": null,
+      "preview": {
+        "top": "#838489",
+        "bottom": "#17181c",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-19",
+      "name": "Terra + Black",
+      "label": "Terra / Crna",
+      "top": "Terra",
+      "bottom": "Crna",
+      "family": "Topli tonovi",
+      "image": "assets/images/colors/nc-19.webp",
+      "width": 255,
+      "height": 257,
+      "availability": null,
+      "preview": {
+        "top": "#8e7c6f",
+        "bottom": "#2c2626",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-20",
+      "name": "Charcoal + Black",
+      "label": "Antracit / Crna",
+      "top": "Antracit",
+      "bottom": "Crna",
+      "family": "Sivi i tamni tonovi",
+      "image": "assets/images/colors/nc-20.webp",
+      "width": 256,
+      "height": 256,
+      "availability": null,
+      "preview": {
+        "top": "#1a1a1f",
+        "bottom": "#0e0e10",
+        "texture": null
+      }
+    },
+    {
+      "code": "NC-21",
+      "name": "Blue camouflage",
+      "label": "Plava kamuflaža",
+      "top": "Plava kamuflaža",
+      "bottom": null,
+      "family": "Kamuflaža",
+      "image": "assets/images/colors/nc-21.webp",
+      "width": 257,
+      "height": 259,
+      "availability": null,
+      "preview": {
+        "top": "#c9dde9",
+        "bottom": "#070811",
+        "texture": "assets/images/colors/nc-21-texture.webp"
+      }
+    },
+    {
+      "code": "NC-22",
+      "name": "Black and white camouflage",
+      "label": "Crno-bijela kamuflaža",
+      "top": "Crno-bijela kamuflaža",
+      "bottom": null,
+      "family": "Kamuflaža",
+      "image": "assets/images/colors/nc-22.webp",
+      "width": 257,
+      "height": 261,
+      "availability": null,
+      "preview": {
+        "top": "#b1b4b7",
+        "bottom": "#060607",
+        "texture": "assets/images/colors/nc-22-texture.webp"
+      }
+    },
+    {
+      "code": "NC-23",
+      "name": "Green Camo",
+      "label": "Zelena kamuflaža",
+      "top": "Zelena kamuflaža",
+      "bottom": null,
+      "family": "Kamuflaža",
+      "image": "assets/images/colors/nc-23.webp",
+      "width": 256,
+      "height": 257,
+      "availability": null,
+      "preview": {
+        "top": "#b7b29b",
+        "bottom": "#09090d",
+        "texture": "assets/images/colors/nc-23-texture.webp"
+      }
+    },
+    {
+      "code": "NC-24",
+      "name": "Beige camouflage",
+      "label": "Bež kamuflaža",
+      "top": "Bež kamuflaža",
+      "bottom": null,
+      "family": "Kamuflaža",
+      "image": "assets/images/colors/nc-24.webp",
+      "width": 251,
+      "height": 259,
+      "availability": null,
+      "preview": {
+        "top": "#af9675",
+        "bottom": "#0f0e0f",
+        "texture": "assets/images/colors/nc-24-texture.webp"
+      }
+    }
+  ]
+}

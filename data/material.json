@@ -1,0 +1,18 @@
+{
+  "headline":"NIJE SVAKA EVA TIKOVINA ISTA.",
+  "intro":"CroTeak bira pažljivo odabran EVA materijal za zahtjevne uvjete na plovilima. Ne oslanjamo se na generičke obloge nepoznatih svojstava: važni su struktura, podloga za lijepljenje i mogućnost precizne obrade.",
+  "features":[
+    {"title":"Protuklizna površina","text":"Teksturirana površina i udobnost pod nogama za svakodnevni boravak na palubi."},
+    {"title":"3M 9775WL","text":"Samoljepljiva podloga s 3M 9775WL ljepilom. Priprema podloge ostaje ključan dio kvalitetne montaže."},
+    {"title":"Deklarirana UV otpornost","text":"Materijal s deklariranom UV otpornošću. Svojstva odabrane varijante potvrđujemo prije narudžbe."},
+    {"title":"Struktura i gustoća","text":"Zatvorena ćelijska struktura i definirana gustoća materijala, uz CNC izradu svakog panela po mjeri."}
+  ],
+  "specifications":[
+    {"value":"6 mm","label":"Debljina panela"},
+    {"value":"160–180","label":"Gustoća u kg/m³"},
+    {"value":"≈ 65°","label":"Tvrdoća Shore C"},
+    {"value":"3000 h*","label":"Deklarirani podatak o UV ispitivanju"}
+  ],
+  "specificationNote":"Vrijednosti su prenesene iz dosadašnje specifikacije CroTeak panela. Svojstva odabrane varijante potvrđujemo pri dogovoru. *Broj sati UV ispitivanja nije jamstvo vijeka trajanja u stvarnim morskim uvjetima.",
+  "adhesiveSource":"3M 9775WL potvrdio je vlasnik u zadatku nadogradnje, studeni 2026. Tehnički list i UV ispitni izvještaj nisu dostavljeni."
+}

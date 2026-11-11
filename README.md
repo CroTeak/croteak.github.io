@@ -33,3 +33,30 @@ Tehničke vrijednosti EVA materijala prenesene su iz prijašnje stranice. Nije d
 Glavni kontaktni pozivi otvaraju WhatsApp na `+385 99 411 9579`. E-mail je prikazan kao poslovna informacija.
 
 Na početnoj stranici, nakon izdvojenih projekata, nalazi se sekcija `#okvirne-cijene`. Viši iznosi raspona prikazani su u zagradama. Na većim ekranima prikazuje se generirana infografika s ilustrativnim plovilima; na mobitelima čitljiva HTML tablica s istim podacima i poveznicom na sliku. Ispod je objašnjeno da je iznose moguće prilagoditi stvarnom opsegu projekta. Ilustrativna plovila nisu predstavljena kao završeni CroTeak radovi. Izvorni `info-cjenik.html` ostaje sačuvan i skriven iz izbornika.
+
+## Studio boja, proces i šablone
+
+- `data/colors.json` sadrži 24 kombinacije NC-1 do NC-24 iz vlasnikovog kataloga i fotografije fizičkih uzoraka. `name` čuva kataloški naziv, `label` hrvatski opis, `top`/`bottom` slojeve. Izvorne slike su u `assets/images/colors/`.
+- `availability: null` znači da stanje nije potvrđeno. `available` ili `unavailable` smije se postaviti samo nakon potvrde vlasnika/dobavljača; uz promjenu zabilježiti datum i izvor potvrde. Trenutačno nijedna kombinacija nema potvrđeno stanje zaliha.
+- `preview.top` i `preview.bottom` su približne nijanse uzete iz fotografije, samo za SVG prikaz. Kamuflaža koristi izrez stvarne teksture. Za NC-21 do NC-24 katalog ne navodi donji sloj, pa `bottom` ostaje `null`. Ne zaključivati slojeve ni raspoloživost samo iz slike.
+- Nova boja dodaje se kao novi zapis s jedinstvenom originalnom šifrom, fotografijom i provjerenim nazivom. Paleta, filtri, odabir i WhatsApp upit generiraju se iz istih podataka. Poveznica `paleta-boja.html?boja=NC-13` unaprijed odabire uzorak. Prikaz palube je jasno označen kao shematska ilustracija.
+- `data/process.json` definira četiri koraka. Fotografije referenciraju `data/images.json` ili stvarni projekt; video je postojeća snimka CNC obrade. Interakcija je ručna, video se ne pokreće automatski i zaustavlja se pri promjeni koraka. Fotografija gotove obloge nije označena kao fotografija samog postupka montaže.
+- `data/templates.json` sadrži pet koraka vodiča i kontrolnu listu. `steps[].image` može biti `null` ili slika u standardnom obliku (`src`, `small`, `width`, `height`, `smallWidth`, `alt`, opcionalni `caption`). `video` može biti `null` ili `{ "src": "assets/media/upute.mp4" }`. Foto/video upute zasad nisu dostavljene i to je izričito navedeno na stranici.
+- `data/material.json` čuva prodajni tekst i deklarirane podatke. Podlogu s 3M 9775WL potvrdio je vlasnik. Nije dostavljen ispitni izvještaj koji bi opravdao novu tvrdnju o certifikatu ili jamstvu trajnosti.
+- Novi predlošci su izdvojeni u `scripts/components/`, a ponašanje u `assets/js/palette.js` i `assets/js/experience.js`. Bez vanjskih biblioteka. Uvažava se `prefers-reduced-motion`; navigacija, galerijske poveznice i tekstovi imaju osnovni prikaz bez JavaScripta.
+
+Opće smjernice za fizičke šablone provjerene su prema [SeaDek kontrolnoj listi](https://www.seadek.com/wp-content/uploads/2023/09/4-012-Customer-Template-Checklist.pdf) i [SurfDek vodiču](https://www.surfdek.co.uk/wp-content/uploads/2023/09/surfdek_marine_templating_guide.pdf). To nisu CroTeak fotografije, certifikati ni dokazi o porijeklu materijala. Vodič traži dogovor s CroTeakom o materijalu, zazorima i slanju; nije propisana neprovjerena univerzalna tolerancija.
+
+## Arvor i buduće usporedbe prije/poslije
+
+Arvor 215 AS uključuje sedam fotografija gotovih obloga i detalja izrade, tri potvrđene fotografije prije te originalni digitalni dizajn. Slična dodatna fotografija gole palube nije ponovljena u galeriji gotovih radova. Cijena od **1.150 € bez postavljanja** odnosi se samo na prikazani projekt, prema potvrdi vlasnika.
+
+Opcionalna polja projekta:
+
+- `featured: true` izdvaja projekt na početak galerije i početne stranice, bez premještanja izvornog popisa.
+- `before`: niz izvornih fotografija u standardnom obliku.
+- `comparisons`: niz `{ "title": "Kokpit", "before": 0, "after": 0 }`, s indeksima fotografija u `before` i `photos`. Samo potvrđeni parovi istog plovila. Prikaz je usporedan jer fotografije nisu snimljene iz potpuno jednakog kuta.
+- `design`: originalni nacrt u standardnom obliku slike.
+- `price`: `{ "amount": 1150, "currency": "EUR", "installationIncluded": false, "note": "Opseg i ograničenja primjera." }`.
+
+Opcionalno polje `story` sadrži potvrđeni opis konkretne izvedbe; ako nije navedeno, koristi se opći opis postupka bez tvrdnji o posebnim motivima i površinama. Stari projekti bez potvrđenih fotografija prije nemaju umjetno stvorenu usporedbu.

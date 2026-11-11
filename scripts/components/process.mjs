@@ -1,0 +1,10 @@
+export function processSection({process,images,projects,img,link}) {
+  return `<section class="section production-section" id="proizvodnja"><div class="wrap"><div class="section-heading"><div><span class="eyebrow">Od mjere do vašeg potpisa</span><h2>Četiri koraka.<br><em>Jedna CroTeak paluba.</em></h2></div><p class="process-intro">Naša oprema. Naši nacrti. Stvarni projekti.<br>Odaberite korak i upoznajte proces izbliza.</p></div>
+  <div data-process><div class="production-tabs" role="tablist" aria-label="Koraci proizvodnje" hidden>${process.map((step,i)=>`<button role="tab" id="tab-${step.id}" aria-controls="panel-${step.id}" aria-selected="${i===0}" tabindex="${i===0?'0':'-1'}" type="button"><span>0${i+1}</span>${step.title}</button>`).join('')}</div>
+  ${process.map((step,i)=>{
+    let media;
+    if(step.media.type==='video') media=`<video controls playsinline muted preload="none" aria-label="Stvarna snimka CNC obrade" poster="${projects.find(p=>p.slug==='arvor-215-as').photos[5].src}"><source src="${step.media.src}" type="video/mp4"><a href="${step.media.src}">Otvori video CNC obrade</a></video>`;
+    else {const image=step.media.type==='project'?projects.find(p=>p.slug===step.media.project).photos[step.media.photo]:images[step.media.imageKey];media=img(image,image.alt||step.media.caption,{sizes:'(max-width: 700px) 100vw, 60vw'});}
+    return `<section class="production-panel" id="panel-${step.id}" role="tabpanel" aria-labelledby="tab-${step.id}" tabindex="0"><figure class="production-media${step.media.contain?' contain':''}">${media}<figcaption>${step.media.caption}</figcaption></figure><div class="production-copy"><span class="eyebrow">0${i+1} / ${step.title}</span><h3>${step.subtitle}</h3><p>${step.text}</p><ul>${step.details.map(x=>`<li>${x}</li>`).join('')}</ul>${link(step.link.label,step.link.href)}<div class="production-controls" hidden><button type="button" data-process-prev aria-label="Prethodni korak proizvodnje">←</button><span>0${i+1} / 04</span><button type="button" data-process-next aria-label="Sljedeći korak proizvodnje">→</button></div></div></section>`;
+  }).join('')}</div></div></section>`;
+}

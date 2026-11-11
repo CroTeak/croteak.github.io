@@ -1,0 +1,30 @@
+[
+  {
+    "id":"izmjera","title":"Digitalna izmjera","subtitle":"Površina postaje precizan nacrt.",
+    "text":"Prodim Prolinerom bilježimo rubove, otvore, poklopce i zaobljenja vašeg plovila. Izmjera je prvi korak naše usluge izrade EVA obloga po mjeri.",
+    "details":["Oblik svake površine","Položaj otvora i poklopaca","Osnova za digitalnu pripremu"],
+    "media":{"type":"image","imageKey":"proliner","caption":"Naš Prodim Proliner uređaj za digitalnu izmjeru."},
+    "link":{"label":"Upoznajte digitalnu izmjeru","href":"proliner.html"}
+  },
+  {
+    "id":"cad","title":"CAD projektiranje","subtitle":"Vaš potpis, prije prvog reza.",
+    "text":"U digitalnom nacrtu usklađujemo raspored panela, smjer linija, obrube, gravure i logotipe. Prikaz dizajna pregledavamo s vama prije izrade.",
+    "details":["Raspored i podjela panela","Linije, obrubi i kompasni motivi","Personalizacija prema dogovoru"],
+    "media":{"type":"image","imageKey":"arvor-design","caption":"Arvor 215 AS — originalni digitalni dizajn projekta.","contain":true},
+    "link":{"label":"Odaberite kombinaciju boja","href":"paleta-boja.html"}
+  },
+  {
+    "id":"cnc","title":"Precizna CNC obrada","subtitle":"Digitalni detalj postaje stvaran.",
+    "text":"Prema pripremljenom CAD nacrtu strojno režemo i graviramo EVA materijal. Tako nastaju zasebni paneli, kontrastne linije i personalizirani motivi.",
+    "details":["Rezanje prema nacrtu","Obrada linija i gravura","Provjera gotovih panela"],
+    "media":{"type":"video","src":"assets/media/croteak-video.mp4","caption":"Stvarna snimka CNC obrade iz naše radionice."},
+    "link":{"label":"Pogledajte detalje Arvor projekta","href":"projekti/arvor-215-as.html"}
+  },
+  {
+    "id":"montaza","title":"Završna montaža","subtitle":"Obloga sjedne na svoje mjesto.",
+    "text":"Nakon provjere rasporeda i pristajanja, paneli se postavljaju na pripremljenu podlogu. Slijedi završna kontrola rubova, poklopaca i detalja. Uslugu montaže dogovaramo zasebno.",
+    "details":["Provjera pristajanja","Čista, suha i pripremljena podloga","Završni pregled izvedbe"],
+    "media":{"type":"project","project":"arvor-215-as","photo":0,"caption":"Arvor 215 AS — fotografija završene obloge. Cijena izrade ovog projekta nije uključivala postavljanje."},
+    "link":{"label":"Pogledajte prije i poslije","href":"projekti/arvor-215-as.html#prije-poslije"}
+  }
+]

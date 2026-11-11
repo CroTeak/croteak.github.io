@@ -373,5 +373,141 @@
         "source": "WhatsApp Image 2026-11-11 at 15.38.392.jpeg"
       }
     ]
+  },
+  {
+    "slug": "arvor-215-as",
+    "title": "Arvor 215 AS",
+    "subtitle": "Od digitalnog dizajna do nove palube",
+    "description": "EVA paneli oblikovani za kokpit, prolaze i krmene platforme. Kontrastne linije, zasebni poklopci i kompasna gravura povezuju cijelu izvedbu.",
+    "tone": "sivi",
+    "cover": 0,
+    "photos": [
+      {
+        "src": "assets/images/arvor-215-as/01.webp",
+        "width": 920,
+        "height": 2040,
+        "small": "assets/images/arvor-215-as/01-small.webp",
+        "smallWidth": 406,
+        "alt": "Arvor 215 AS — završena EVA obloga kokpita s tamnim linijama i kompasnom gravurom",
+        "source": "23123.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/02.webp",
+        "width": 920,
+        "height": 2040,
+        "small": "assets/images/arvor-215-as/02-small.webp",
+        "smallWidth": 406,
+        "alt": "Arvor 215 AS — detalji postavljenih panela uz bočnu klupu",
+        "source": "WhatsApp Image 202123126-08-13 at 08.02.23.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/03.webp",
+        "width": 920,
+        "height": 2040,
+        "small": "assets/images/arvor-215-as/03-small.webp",
+        "smallWidth": 406,
+        "alt": "Arvor 215 AS — kokpit s odvojenim panelima za poklopce i kompasnim motivom",
+        "source": "WhatsApp Image 2026-08-13 at 08.02.23.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/04.webp",
+        "width": 920,
+        "height": 2040,
+        "small": "assets/images/arvor-215-as/04-small.webp",
+        "smallWidth": 406,
+        "alt": "Arvor 215 AS — obloga bočnih prolaza i središnjeg poklopca",
+        "source": "WhatsApp Image 2026-12312308-13 at 08.02.23.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/05.webp",
+        "width": 1800,
+        "height": 812,
+        "small": "assets/images/arvor-215-as/05-small.webp",
+        "smallWidth": 640,
+        "alt": "Arvor 215 AS — gotove obloge krmenih platformi uz ljestve",
+        "source": "WhatsApp Image 20261231231-08-13 at 08.02.23.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/06.webp",
+        "width": 1500,
+        "height": 2000,
+        "small": "assets/images/arvor-215-as/06-small.webp",
+        "smallWidth": 640,
+        "alt": "Arvor 215 AS — detalj izrađenog panela s kompasnom gravurom u radionici",
+        "source": "WhatsApp Image 2026-08-09 at 23.03.55.jpeg"
+      },
+      {
+        "src": "assets/images/arvor-215-as/07.webp",
+        "width": 1500,
+        "height": 2000,
+        "small": "assets/images/arvor-215-as/07-small.webp",
+        "smallWidth": 640,
+        "alt": "Arvor 215 AS — izrađeni paneli raspoređeni prije postavljanja na brod",
+        "source": "WhatsApp Image 2026-08-10 at 15.05.27.jpeg"
+      }
+    ],
+    "before": [
+      {
+        "src": "assets/images/arvor-215-as/prije-1.webp",
+        "width": 602,
+        "height": 1080,
+        "small": "assets/images/arvor-215-as/prije-1-small.webp",
+        "smallWidth": 502,
+        "alt": "Arvor 215 AS — kokpit prije oblaganja",
+        "source": "prije 1.png"
+      },
+      {
+        "src": "assets/images/arvor-215-as/prije-2.webp",
+        "width": 478,
+        "height": 1072,
+        "small": "assets/images/arvor-215-as/prije-2-small.webp",
+        "smallWidth": 401,
+        "alt": "Arvor 215 AS — bočni prolaz i poklopci prije oblaganja",
+        "source": "prije 2.png"
+      },
+      {
+        "src": "assets/images/arvor-215-as/prije-3.webp",
+        "width": 1332,
+        "height": 597,
+        "small": "assets/images/arvor-215-as/prije-3-small.webp",
+        "smallWidth": 640,
+        "alt": "Arvor 215 AS — krmene platforme prije oblaganja",
+        "source": "prije 3.png"
+      }
+    ],
+    "comparisons": [
+      {
+        "title": "Kokpit",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "title": "Bočni prolaz",
+        "before": 1,
+        "after": 3
+      },
+      {
+        "title": "Krmene platforme",
+        "before": 2,
+        "after": 4
+      }
+    ],
+    "price": {
+      "amount": 1150,
+      "currency": "EUR",
+      "installationIncluded": false,
+      "note": "Cijena izrade obloga za prikazani projekt, bez postavljanja. Svaku novu ponudu prilagođavamo površini, materijalu i opsegu radova."
+    },
+    "design": {
+      "src": "assets/images/arvor-215-as/dizajn.webp",
+      "width": 884,
+      "height": 1600,
+      "small": "assets/images/arvor-215-as/dizajn-small.webp",
+      "smallWidth": 497,
+      "alt": "Arvor 215 AS — originalni digitalni dizajn rasporeda panela i kompasne gravure",
+      "source": "WhatsApp Image 2026-08-06 at 15.16.42.jpeg"
+    },
+    "featured": true,
+    "story": "Raspored panela, linije i kompasni motiv definirani su u digitalnom dizajnu. CNC obradom nastaju zasebne obloge za kokpit, poklopce, prolaze i krmene platforme."
   }
 ]
