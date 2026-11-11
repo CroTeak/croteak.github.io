@@ -1,0 +1,13 @@
+{
+  "image": "assets/images/okvirne-cijene-v1.webp",
+  "imageWidth": 1536,
+  "imageHeight": 1024,
+  "rows": [
+    { "length": "5–6 m", "from": 850, "upper": 1250 },
+    { "length": "6–8 m", "from": 1250, "upper": 1700 },
+    { "length": "8–10 m", "from": 1700, "upper": 2200 },
+    { "length": "10–12 m", "from": 2200 },
+    { "length": "12 m i više", "onRequest": true }
+  ],
+  "note": "Navedene cijene služe za početnu orijentaciju i mogu se korigirati naviše ili naniže. Konačna cijena ovisi o stvarnoj površini oblaganja, obliku i složenosti panela, odabranom materijalu, njegovoj potrošnji i ostacima pri krojenju, dizajnu i gravurama, pripremi podloge, montaži te lokaciji plovila. Sama duljina broda ne određuje konačnu cijenu. Preciznu ponudu potvrđujemo nakon pregleda fotografija ili izmjere i dogovora o opsegu radova."
+}

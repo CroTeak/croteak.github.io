@@ -9,6 +9,7 @@ Statična web stranica za GitHub Pages. HTML, CSS i JavaScript bez vanjskih bibl
 - `assets/js/site.js`: mobilni izbornik, filteri i pristupačna galerija s tipkovnicom.
 - `data/projects.json`: projekti i fotografije, uključujući opise i odabranu naslovnu fotografiju.
 - `data/images.json`: zajedničke fotografije i prikazi dizajna.
+- `data/pricing.json`: okvirne cijene po duljini plovila i napomena o prilagodbi ponude. Kod izmjena cijena treba uskladiti i infografiku `assets/images/okvirne-cijene-v1.webp`.
 
 Nakon izmjene sadržaja ili podataka pokrenuti `node scripts/build.mjs` iz korijena repozitorija. Generirane HTML stranice i sitemap spremiti zajedno s izvorima. GitHub Pages poslužuje spremne datoteke; na hostingu nije potreban Node.js.
 
@@ -30,3 +31,5 @@ Izvorna galerija (Merry Fisher 625 i Gobby Fisherman) sačuvana je u cijelosti i
 Tehničke vrijednosti EVA materijala prenesene su iz prijašnje stranice. Nije dodan novi certifikat ni jamstvo. Izostavljena je prijašnja izravna pretvorba 3000 sati UV testa u tvrdnju o 5–7 godina trajanja, jer ta veza nije potkrijepljena ispitnim izvještajem. Svojstva konkretne varijante treba potvrditi prije narudžbe.
 
 Glavni kontaktni pozivi otvaraju WhatsApp na `+385 99 411 9579`. E-mail je prikazan kao poslovna informacija.
+
+Na početnoj stranici, nakon izdvojenih projekata, nalazi se sekcija `#okvirne-cijene`. Viši iznosi raspona prikazani su u zagradama. Na većim ekranima prikazuje se generirana infografika s ilustrativnim plovilima; na mobitelima čitljiva HTML tablica s istim podacima i poveznicom na sliku. Ispod je objašnjeno da je iznose moguće prilagoditi stvarnom opsegu projekta. Ilustrativna plovila nisu predstavljena kao završeni CroTeak radovi. Izvorni `info-cjenik.html` ostaje sačuvan i skriven iz izbornika.
