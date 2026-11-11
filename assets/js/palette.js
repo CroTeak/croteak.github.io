@@ -11,6 +11,7 @@
     const color = colors.get(code);
     if (!color) return;
     radios.forEach(radio => { radio.checked = radio.value === code; });
+    document.querySelectorAll('[data-quick-code]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.quickCode === code)));
     svg.style.setProperty('--deck-top', color.preview.top);
     svg.style.setProperty('--deck-bottom', color.preview.bottom);
     svg.querySelector('.deck-panels').setAttribute('fill', color.preview.texture ? 'url(#deck-camo)' : 'url(#deck-lines)');
@@ -26,6 +27,16 @@
     if (updateAddress) { const url = new URL(location.href); url.searchParams.set('boja',code); history.replaceState(null,'',url); }
   }
   radios.forEach(radio => radio.addEventListener('change', () => select(radio.value)));
+  const quickColors = document.querySelector('[data-quick-colors]');
+  quickColors.hidden = false;
+  quickColors.addEventListener('click', event => {
+    const button = event.target.closest('[data-quick-code]');
+    if (!button) return;
+    // Keep the full catalogue consistent if the quick selection is outside its filter.
+    const radio = radios.find(input => input.value === button.dataset.quickCode);
+    if (radio.closest('label').hidden) document.querySelector('[data-color-filter="all"]').click();
+    select(button.dataset.quickCode);
+  });
   const filters = document.querySelector('[data-color-filters]');
   filters.hidden = false;
   filters.addEventListener('click', event => {
@@ -48,6 +59,7 @@
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => seen.set(entry.target,entry.isIntersecting));
       document.querySelector('[data-mobile-preview]').hidden = !seen.get(selector) || seen.get(preview);
+      document.body.classList.toggle('palette-preview-visible',Boolean(seen.get(preview)));
     },{rootMargin:'-80px 0px 0px 0px'});
     observer.observe(preview); observer.observe(selector);
   }

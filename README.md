@@ -32,7 +32,7 @@ Tehničke vrijednosti EVA materijala prenesene su iz prijašnje stranice. Nije d
 
 Glavni kontaktni pozivi otvaraju WhatsApp na `+385 99 411 9579`. E-mail je prikazan kao poslovna informacija.
 
-Na početnoj stranici, nakon izdvojenih projekata, nalazi se sekcija `#okvirne-cijene`. Viši iznosi raspona prikazani su u zagradama. Na većim ekranima prikazuje se generirana infografika s ilustrativnim plovilima; na mobitelima čitljiva HTML tablica s istim podacima i poveznicom na sliku. Ispod je objašnjeno da je iznose moguće prilagoditi stvarnom opsegu projekta. Ilustrativna plovila nisu predstavljena kao završeni CroTeak radovi. Izvorni `info-cjenik.html` ostaje sačuvan i skriven iz izbornika.
+Na početnoj stranici, nakon izdvojenih projekata, nalazi se sekcija `#okvirne-cijene`. Viši iznosi raspona prikazani su u zagradama. Na većim ekranima prikazuje se generirana infografika s ilustrativnim plovilima; na mobitelima pet čitljivih kartica s ilustracijama brodova i istim cijenama te poveznicom na cijelu sliku. Ispod je objašnjeno da je iznose moguće prilagoditi stvarnom opsegu projekta. Ilustrativna plovila nisu predstavljena kao završeni CroTeak radovi. Izvorni `info-cjenik.html` ostaje sačuvan i skriven iz izbornika.
 
 ## Studio boja, proces i šablone
 
@@ -60,3 +60,12 @@ Opcionalna polja projekta:
 - `price`: `{ "amount": 1150, "currency": "EUR", "installationIncluded": false, "note": "Opseg i ograničenja primjera." }`.
 
 Opcionalno polje `story` sadrži potvrđeni opis konkretne izvedbe; ako nije navedeno, koristi se opći opis postupka bez tvrdnji o posebnim motivima i površinama. Stari projekti bez potvrđenih fotografija prije nemaju umjetno stvorenu usporedbu.
+
+
+## Mobilni prikaz i ispravnost nijansi
+
+- `assets/css/mobile.css` sadrži dorade za uske ekrane: brzi odabir uzoraka uz palubu, veće uzorke i dodirne kontrole, prikaz cijelih projektnih fotografija, mobilnu galeriju, navigaciju i čitljivije tekstove. Shema označavanja u vodiču može se zasebno pomicati bez širenja stranice.
+- `data/pricing.json` uz svaki raspon ima `imageRegion` — pravokutnik ilustracije broda u postojećoj infografici. Mobilne SVG kartice koriste istu postojeću sliku; ne preuzimaju pet novih datoteka. Cijene i napomena generiraju se iz zajedničkih podataka.
+- `preview.bottomSample` bilježi provjerenu regiju stvarnog uzorka za NC-1, NC-5 i NC-14. Uzorkovati točno crtu donjeg sloja, a ne površinu neposredno pokraj nje. Crna i bijela linija moraju odgovarati kataloškom nazivu. NC-20 ostaje prirodno slabo kontrastna kombinacija antracita i crne.
+- Uzdužne linije nacrtane su neprekinutim SVG trakama, s diskretnim osvjetljenjem ruba. Time se izbjegavaju prekidi i poprečni spojevi ponavljanog uzorka. Materijalni uzorci i izvorne šifre nisu promijenjeni.
+- Generator dodaje sadržajnu verziju CSS i JS poveznicama (`?v=...`) kako bi se nakon objave preuzeli aktualni stilovi i kontrole. Ne mijenjati generirane HTML datoteke ručno.

@@ -3,7 +3,7 @@ export function deckPreview(color) {
   <defs>
     <linearGradient id="hull" x1="0" x2="1"><stop stop-color="#9aaba8"/><stop offset=".12" stop-color="#edece4"/><stop offset=".5" stop-color="#fffef5"/><stop offset=".9" stop-color="#cfdbd5"/><stop offset="1" stop-color="#748984"/></linearGradient>
     <linearGradient id="glass" x2=".2" y2="1"><stop stop-color="#718f8c"/><stop offset="1" stop-color="#152c2e"/></linearGradient>
-    <pattern id="deck-lines" width="31" height="31" patternUnits="userSpaceOnUse"><rect width="31" height="31" class="deck-top"/><path d="M1 0v31" class="deck-groove" stroke-width="3"/><path d="M8 0v31m8-31v31m8-31v31" stroke="#fff" stroke-opacity=".045"/></pattern>
+    <pattern id="deck-lines" width="31" height="600" patternUnits="userSpaceOnUse" stroke="none"><rect width="31" height="600" class="deck-top"/><rect x="13" width="1" height="600" fill="#fff" opacity=".2"/><rect x="14" width="4" height="600" class="deck-stripe"/><rect x="18" width="1" height="600" fill="#000" opacity=".15"/><path d="M5 0v600m20-600v600" fill="none" stroke="#fff" stroke-width=".7" stroke-opacity=".06"/></pattern>
     <pattern id="deck-camo" width="115" height="115" patternUnits="userSpaceOnUse"><image data-camo-image width="115" height="115" href="assets/images/colors/nc-21-texture.webp"/></pattern>
     <filter id="boat-shadow" x="-50%" y="-20%" width="200%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#000" flood-opacity=".45"/></filter>
   </defs>
@@ -31,7 +31,7 @@ export function deckPreview(color) {
   <g fill="#acbbb2" font-family="Arial,sans-serif" font-size="10" letter-spacing="2"><text x="40" y="65">PRAMAC ↑</text><text x="40" y="565">STUDIO BOJA / CROTEAK</text><text x="600" y="565" text-anchor="end">SHEMATSKI PRIKAZ</text></g></svg>`;
 }
 
-export function palettePage({catalog,button,whatsapp,escape}) {
+export function palettePage({catalog,button,whatsapp,escape,assetUrl}) {
   const first=catalog.colors[0];
   return `<section class="page-intro palette-intro"><div class="wrap"><span class="eyebrow">CroTeak / Studio boja</span><h1>Vaša paluba.<br><em>Vaša kombinacija.</em></h1><div class="palette-intro-row"><p class="lead">Od toplih teak tonova do izraženih kontrasta. Istražite stvarne uzorke i pogledajte kako kombinacija mijenja karakter palube.</p><span class="catalog-count"><strong>24</strong> kataloške kombinacije</span></div></div></section>
   <section class="section palette-section" id="paleta"><div class="wrap palette-layout">
@@ -41,6 +41,7 @@ export function palettePage({catalog,button,whatsapp,escape}) {
       <p class="palette-source">Fotografirani fizički uzorci, povezani s originalnim šiframa kataloga. <a href="assets/images/colors/izvorni-katalog.webp" target="_blank" rel="noopener">Otvori izvorni katalog ↗</a> <a href="assets/images/colors/stvarni-uzorci.webp" target="_blank" rel="noopener">Svi fizički uzorci ↗</a></p>
     </div>
     <aside class="palette-preview" id="pregled-boje" aria-label="Pregled odabrane kombinacije"><div class="preview-topline"><span>Pregled na palubi</span><span class="preview-code" data-selected-code>NC-1</span></div>${deckPreview(first)}
+      <div class="preview-quick-colors" data-quick-colors hidden role="group" aria-label="Brzi odabir boje uz pregled palube">${catalog.colors.map((c,i)=>`<button type="button" data-quick-code="${c.code}" aria-label="Odaberi ${c.code}: ${escape(c.name)}" aria-pressed="${i===0}"><img src="${c.image}" width="${c.width}" height="${c.height}" alt="${c.code}" loading="lazy"><span>${c.code}</span></button>`).join('')}</div>
       <div class="selected-color"><div class="selected-heading" role="status" aria-live="polite" aria-atomic="true"><span class="eyebrow" data-selected-label>${first.label}</span><h2 data-selected-name>${first.name}</h2></div>
       <dl class="color-layers"><div><dt>Gornji sloj</dt><dd data-layer-top>${first.top}</dd></div><div><dt>Donji sloj / linije</dt><dd data-layer-bottom>${first.bottom}</dd></div></dl>
       <p class="color-availability" data-availability>${catalog.availabilityNote}</p>
@@ -49,7 +50,7 @@ export function palettePage({catalog,button,whatsapp,escape}) {
     </aside>
   </div><a class="mobile-preview-link" href="#pregled-boje" data-mobile-preview hidden>Pogledajte odabir <strong data-mobile-code>NC-1</strong> ↑</a><noscript><p class="wrap scope-note">Svi uzorci su prikazani. Za promjenu boje u shematskom prikazu uključite JavaScript ili nam pošaljite šifru odabranog uzorka.</p></noscript></section>
   <section class="section palette-bottom"><div class="wrap split"><div><span class="eyebrow">Dva sloja. Jedan prepoznatljiv izgled.</span><h2>Boja daje ton.<br><em>Detalji daju karakter.</em></h2></div><div><p>Gornji sloj čini površinu obloge. CNC obradom otkriva se donji sloj koji oblikuje linije, obrube i gravure. Prikazane su kombinacije iz dostavljenog kataloga; druge kombinacije provjeravamo pojedinačno.</p><p>Za kamuflažne uzorke katalog ne navodi zasebnu boju donjeg sloja. Tu pojedinost potvrđujemo prije izrade.</p>${button('Dogovorite odabir materijala',whatsapp)}</div></div></section>
-  <script type="application/json" id="color-data">${JSON.stringify(catalog).replace(/</g,'\\u003c')}</script><script src="assets/js/palette.js" defer></script>`;
+  <script type="application/json" id="color-data">${JSON.stringify(catalog).replace(/</g,'\\u003c')}</script><script src="${assetUrl('assets/js/palette.js')}" defer></script>`;
 }
 
 export function paletteTeaser({catalog,link}) {

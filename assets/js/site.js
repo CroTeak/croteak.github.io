@@ -3,12 +3,14 @@ const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
 function closeMenu(restoreFocus = false) {
   nav?.classList.remove('open');
+  document.body.classList.remove('menu-open');
   toggle?.setAttribute('aria-expanded', 'false');
   toggle?.setAttribute('aria-label', 'Otvori izbornik');
   if (restoreFocus) toggle?.focus();
 }
 toggle?.addEventListener('click', () => {
   const opened = nav.classList.toggle('open');
+  document.body.classList.toggle('menu-open',opened);
   toggle.setAttribute('aria-expanded', String(opened));
   toggle.setAttribute('aria-label', opened ? 'Zatvori izbornik' : 'Otvori izbornik');
 });

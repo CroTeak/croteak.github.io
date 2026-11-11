@@ -16,8 +16,17 @@
       "availability": null,
       "preview": {
         "top": "#b68947",
-        "bottom": "#ad8a55",
-        "texture": null
+        "bottom": "#160e08",
+        "texture": null,
+        "bottomSample": {
+          "image": "assets/images/colors/nc-1.webp",
+          "box": [
+            116,
+            80,
+            121,
+            150
+          ]
+        }
       }
     },
     {
@@ -84,8 +93,17 @@
       "availability": null,
       "preview": {
         "top": "#8d5d32",
-        "bottom": "#8b5e33",
-        "texture": null
+        "bottom": "#e3e2f5",
+        "texture": null,
+        "bottomSample": {
+          "image": "assets/images/colors/nc-5.webp",
+          "box": [
+            116,
+            80,
+            121,
+            150
+          ]
+        }
       }
     },
     {
@@ -237,8 +255,17 @@
       "availability": null,
       "preview": {
         "top": "#3d444c",
-        "bottom": "#2d2d32",
-        "texture": null
+        "bottom": "#0c1016",
+        "texture": null,
+        "bottomSample": {
+          "image": "assets/images/colors/nc-14.webp",
+          "box": [
+            121,
+            80,
+            126,
+            150
+          ]
+        }
       }
     },
     {
