@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://croteak.github.io/sitemap.xml

@@ -1,0 +1,313 @@
+[
+  {
+    "slug": "quicksilver-635-wa",
+    "title": "Quicksilver 635 WA",
+    "subtitle": "Sivo-smeđa izvedba",
+    "description": "Sivo-smeđa EVA obloga s crnim linijama i motivima kompasa. Paneli prate kokpit, bočne prolaze, pramac i krmene površine.",
+    "tone": "sivi",
+    "cover": 0,
+    "photos": [
+      {
+        "src": "assets/images/quicksilver-635-wa/01.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/01-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — pogled prema kokpitu s eva podnim oblogama",
+        "source": "101.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/02.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/quicksilver-635-wa/02-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — eva obloga bočnog prolaza uz vjetrobransko staklo",
+        "source": "102.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/03.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/quicksilver-635-wa/03-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — pogled s krme na uređene površine broda",
+        "source": "103.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/04.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/04-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — detalj kokpita s kompasnim motivima i obrubima",
+        "source": "104.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/05.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/05-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — paneli prilagođeni bočnom prolazu",
+        "source": "105.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/06.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/06-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — pramčani panel s gravurom i prilagođenim otvorima",
+        "source": "106.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/07.webp",
+        "width": 1600,
+        "height": 900,
+        "small": "assets/images/quicksilver-635-wa/07-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — eva paneli na krmenim površinama",
+        "source": "107.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/08.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/08-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — brod na vezu u marini",
+        "source": "108.jpeg"
+      },
+      {
+        "src": "assets/images/quicksilver-635-wa/09.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/quicksilver-635-wa/09-small.webp",
+        "smallWidth": 640,
+        "alt": "Quicksilver 635 WA — pogled na brod u marini",
+        "source": "109.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "merry-fisher-625-teak",
+    "title": "Merry Fisher 625",
+    "subtitle": "Topli teak tonovi",
+    "description": "Topli tonovi tikovine, kontrastne linije i kompasni motivi. Obloga povezuje kokpit i prolaze uz zasebno oblikovane poklopce.",
+    "tone": "teak",
+    "cover": 1,
+    "photos": [
+      {
+        "src": "assets/images/merry-fisher-625-teak/01.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/merry-fisher-625-teak/01-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — oblikovani eva paneli s kružnim otvorom",
+        "source": "201.jpeg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-teak/02.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/merry-fisher-625-teak/02-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — kokpit s teak oblogom i kompasnim gravurama",
+        "source": "202.jpeg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-teak/03.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/merry-fisher-625-teak/03-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — pogled s krme na završene eva obloge",
+        "source": "203.jpeg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-teak/04.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/merry-fisher-625-teak/04-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — detalj obloge uz večernju rasvjetu",
+        "source": "204.jpeg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-teak/05.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/merry-fisher-625-teak/05-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — obloga prolaza i motiv kompasa",
+        "source": "205.jpeg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-teak/06.webp",
+        "width": 1200,
+        "height": 1600,
+        "small": "assets/images/merry-fisher-625-teak/06-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — večernji pogled na kokpit",
+        "source": "206.jpeg"
+      }
+    ]
+  },
+  {
+    "slug": "merry-fisher-925",
+    "title": "Merry Fisher 925",
+    "subtitle": "Personalizirana paluba",
+    "description": "EVA obloga u toplom tonu tikovine, s gravurom imena Queen i kompasnim motivima. Paneli prate oblik kokpita i poklopaca.",
+    "tone": "teak",
+    "cover": 0,
+    "photos": [
+      {
+        "src": "assets/images/merry-fisher-925/01.webp",
+        "width": 480,
+        "height": 640,
+        "small": "assets/images/merry-fisher-925/01-small.webp",
+        "smallWidth": 480,
+        "alt": "Merry Fisher 925 — kokpit s eva oblogom, gravurom queen i motivima kompasa",
+        "source": "Merry Fisher 925.webp"
+      }
+    ]
+  },
+  {
+    "slug": "gobby-fisherman",
+    "title": "Gobby Fisherman",
+    "subtitle": "Od pramca do krme",
+    "description": "Teak tonovi s crnim linijama na pramcu, kokpitu i krmenim površinama. Zaobljeni obrubi prate oblik pojedinih panela.",
+    "tone": "teak",
+    "cover": 0,
+    "photos": [
+      {
+        "src": "assets/images/gobby-fisherman/01.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/gobby-fisherman/01-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — pramčana platforma s oblikovanim eva panelima",
+        "source": "rad1.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/02.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/gobby-fisherman/02-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — pogled na završene obloge s pramca",
+        "source": "rad2.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/03.webp",
+        "width": 1600,
+        "height": 900,
+        "small": "assets/images/gobby-fisherman/03-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — eva obloga na krmenoj površini",
+        "source": "rad3.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/04.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/gobby-fisherman/04-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — detalj zaobljenih rubova krmenog panela",
+        "source": "rad4.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/05.webp",
+        "width": 1600,
+        "height": 900,
+        "small": "assets/images/gobby-fisherman/05-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — paneli uz vanbrodski motor",
+        "source": "rad5.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/06.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/gobby-fisherman/06-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — pramčani paneli prilagođeni obliku broda",
+        "source": "rad6.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/07.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/gobby-fisherman/07-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — pogled odozgo na pramac i kokpit",
+        "source": "rad7.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/08.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/gobby-fisherman/08-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — eva podovi u kokpitu",
+        "source": "rad8.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/09.webp",
+        "width": 1600,
+        "height": 1200,
+        "small": "assets/images/gobby-fisherman/09-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — cijeli brod s postavljenim oblogama",
+        "source": "rad9.jpg"
+      },
+      {
+        "src": "assets/images/gobby-fisherman/10.webp",
+        "width": 1596,
+        "height": 2048,
+        "small": "assets/images/gobby-fisherman/10-small.webp",
+        "smallWidth": 640,
+        "alt": "Gobby Fisherman — detalj obloge u središnjem dijelu broda",
+        "source": "rad10.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "merry-fisher-625-siva",
+    "title": "Merry Fisher 625",
+    "subtitle": "Siva izvedba",
+    "description": "Siva EVA obloga s tamnim linijama, kompasnim motivima i personaliziranom gravurom. Paneli izrađeni prema površinama kokpita i prolaza.",
+    "tone": "sivi",
+    "cover": 0,
+    "photos": [
+      {
+        "src": "assets/images/merry-fisher-625-siva/01.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/merry-fisher-625-siva/01-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — siva eva obloga kokpita s motivima kompasa",
+        "source": "mf625-1.jpg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-siva/02.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/merry-fisher-625-siva/02-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — pogled s krme na sivu oblogu kokpita",
+        "source": "mf625-2.jpg"
+      },
+      {
+        "src": "assets/images/merry-fisher-625-siva/03.webp",
+        "width": 1536,
+        "height": 2048,
+        "small": "assets/images/merry-fisher-625-siva/03-small.webp",
+        "smallWidth": 640,
+        "alt": "Merry Fisher 625 — siva obloga uz upravljačko mjesto",
+        "source": "mf625-3.jpg"
+      }
+    ]
+  }
+]

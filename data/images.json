@@ -1,0 +1,51 @@
+{
+  "proliner": {
+    "src": "assets/images/proliner.webp",
+    "width": 919,
+    "height": 690,
+    "small": "assets/images/proliner-small.webp",
+    "smallWidth": 640
+  },
+  "design": {
+    "src": "assets/images/design.webp",
+    "width": 1260,
+    "height": 1023,
+    "small": "assets/images/design-small.webp",
+    "smallWidth": 640
+  },
+  "design-detail": {
+    "src": "assets/images/design-detail.webp",
+    "width": 1600,
+    "height": 1098,
+    "small": "assets/images/design-detail-small.webp",
+    "smallWidth": 640
+  },
+  "design-layout": {
+    "src": "assets/images/design-layout.webp",
+    "width": 1600,
+    "height": 916,
+    "small": "assets/images/design-layout-small.webp",
+    "smallWidth": 640
+  },
+  "template": {
+    "src": "assets/images/template.webp",
+    "width": 469,
+    "height": 786,
+    "small": "assets/images/template-small.webp",
+    "smallWidth": 469
+  },
+  "nesting": {
+    "src": "assets/images/nesting.webp",
+    "width": 477,
+    "height": 779,
+    "small": "assets/images/nesting-small.webp",
+    "smallWidth": 477
+  },
+  "hero": {
+    "src": "assets/images/hero.webp",
+    "width": 1600,
+    "height": 1200,
+    "small": "assets/images/hero-small.webp",
+    "smallWidth": 640
+  }
+}
